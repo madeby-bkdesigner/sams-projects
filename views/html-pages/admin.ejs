@@ -1,0 +1,35 @@
+<%- include ('../partials/header') %> 
+<%- include ('../partials/nav') %> 
+
+    <main class="main-admin">
+        <div class="container">
+            <section class="main-sec">
+                <div class="form">
+                    <form action="/" method="POST">
+                        <div class="content">
+                            <label for="image">picture</label>
+                            <input type="text" name="image" required>
+                        </div>
+                        <div class="content">
+                            <label for="name">name</label>
+                            <input type="text" name="name" required>
+                        </div>
+                        <div class="content">
+                            <label for="category">category</label>
+                            <input type="text" name="category" required>
+                        </div>
+                        <div class="content">
+                            <label for="desc">description</label>
+                            <input class="desc" type="text" name="desc" required>
+                        </div>
+                        <div class="btn">
+                            <button type="submit">add post</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <aside class="side-bar"></aside>
+        </div>
+    </main>
+
+<%- include ('../partials/footer') %> 

@@ -1,0 +1,25 @@
+                            Routes
+                            Navigation
+
+
+.Home       .Entertainment          .History        .Science & Nature          .Funfacts
+                .Lorem                  .Lorem              .Lorem                  .Lorem
+                .Lorm2                  .Lorem2             .Lorem2                 .Lorem2
+                .Lore3                  .Lorem3             .Lorem3                 .Lorem3
+                .lorem4                 .Lorem4             .Lorem4                 .Lorem4
+                                        
+
+
+
+                            Footer
+
+                        Social Media
+
+
+.Information      .Entertainment    .pupular facts                 
+    .lorem            .lorem            .Lorem              
+    .lorem            .lorem2           .Lorem2
+    .lorem            .lorem3           .Lorem3
+    .lorem            .lorem4           .Lorem4
+
+                      copyright

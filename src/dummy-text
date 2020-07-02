@@ -1,0 +1,17 @@
+let data = [
+        {
+            image: 'https://cdn.pixabay.com/photo/2016/11/14/04/43/boy-1822631__340.jpg',
+            name: '100 facts',
+            desc: 'lorem lorem lorem lorem',
+            category: 'history'
+        }
+    ]
+    
+    posts.create(data, (err, posts) => {
+        if (err) {
+            log(err)
+        } else {
+            log(posts)
+            res.render('./html-pages/home', {posts: posts})
+        }
+    })

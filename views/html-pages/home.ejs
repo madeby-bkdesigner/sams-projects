@@ -1,0 +1,46 @@
+<%- include ('../partials/header') %> 
+<%- include ('../partials/nav') %> 
+
+<header class="home-header">
+    <div class="container">
+        <div class="newsletter">
+            <div class="title"> 
+                <h3>signup for our free newsletter </h3>
+            </div>
+            <div class="input">
+                <form action="#">
+                    <input type="email" name="newsletter" placeholder="Enter your email address" required>
+                    <input type="submit"></input>
+                </form>
+            </div>
+        </div>
+        <div class="showcase">
+            <div class="posts">
+                <% if(posts){%>
+                    <% posts.forEach(post=>{ %>
+                        <div class="img">
+                            <img src="<%= post.image%>" alt="">
+                        </div>
+                        <div class="name">
+                            <p><%= post.name%></p>
+                        </div>
+                        <div class="cate">
+                            <p><%= post.category%></p>
+                        </div>
+                        <div class="description">
+                            <p><%= post.desc%></p>
+                        </div>
+
+                   <% }) %> 
+               <% } %> 
+            </div>
+            
+        </div>
+    </div>
+</header>
+
+
+
+
+
+<%- include ('../partials/footer') %> 
