@@ -13,7 +13,6 @@ router.get('/', (req, res) => {
         if (err) {
             log(err)
         } else {
-            log(post)
             res.render('./html-pages/home', { posts: post })
         }
     })
@@ -41,4 +40,17 @@ router.post('/', (req, res) => {
         }
     })
 })
+
+/// show desc
+router.get('/readmore/:id', (req, res) => {
+    posts.find(req.params.id, (err, foundPost) => {
+        if (err || !foundPost) {
+            log(err)
+        } else {
+            res.render('./html-pages/showdesc'; {foundPost})
+        }
+    })
+})
+
+
 module.exports = router

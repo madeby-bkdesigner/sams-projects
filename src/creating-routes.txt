@@ -23,3 +23,8 @@
     .lorem            .lorem4           .Lorem4
 
                       copyright
+
+
+/////////////////////////////
+Colors
+##2ebdc4 Navigation

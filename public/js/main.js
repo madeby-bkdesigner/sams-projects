@@ -18,7 +18,7 @@ $(burgerMenu).on('click', e => {
 //close
 $(closeMenu).on('click', e => {
     $(navBars).slideUp(150)
-    $(burgerMenu).css('display', 'block')
+    $(burgerMenu).slideToggle(250)
 })
 
 
@@ -39,4 +39,21 @@ backArrow.forEach(backArrow=> {
 function mainMenu() {
     $(subnavContent).css('display', 'none')
     $(subnavBtn).slideToggle(200)
+}
+
+// ======================================//
+let slides = 0
+slideShow()
+
+function slideShow() {
+    let mySlides = document.querySelectorAll('.my-slides')
+    for(let i = 0; i < mySlides.length; i++){
+        mySlides[i].style.display = 'none'
+    }
+    slides++
+    if(slides > mySlides.length){
+        slides = 1
+    }
+    mySlides[slides-1].style.display = 'block'
+    setTimeout(slideShow, 2500)
 }
