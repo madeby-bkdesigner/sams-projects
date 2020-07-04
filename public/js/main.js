@@ -52,7 +52,7 @@ function slideShow() {
     }
     slides++
     if(slides > mySlides.length){
-        slides = 1
+        slides =1
     }
     $(mySlides[slides - 1]).css('display', 'block')
     setTimeout(slideShow, 2500)

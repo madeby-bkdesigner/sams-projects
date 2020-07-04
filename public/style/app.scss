@@ -39,7 +39,7 @@ body {
               top: 0;
               left: 0;
               width: 100%;
-              height: 350px;
+              height: 100vh;
   
               .transparent {
                 background-color: rgba(26, 32, 41, 0.5);
@@ -47,7 +47,7 @@ body {
                 .burger-close {
                   float: left;
                   font-size: 36px;
-                  color: rgb(22, 21, 21);
+                  color: #66d84a;
                   padding: 15px;
                   cursor: pointer;
                 }
@@ -94,7 +94,7 @@ body {
                       margin: 10px 0 0 0;
                     }
                     &:hover {
-                      background-color: rgba(155, 146, 146, 0.6);
+                      background-color: rgba(102, 216, 74, 0.5);
                       padding-bottom: 10px;
                     }
                   }
@@ -112,7 +112,7 @@ body {
                             color: rgb(99, 97, 97);
                           }
                           &:hover {
-                            background-color: rgba(155, 146, 146, 0.6);
+                            background-color: rgba(102, 216, 74, 0.5);
                             padding-bottom: 10px;
                           }
                         }
@@ -130,7 +130,7 @@ body {
                       margin: 20px 0 0 0;
   
                       &:hover {
-                        background-color: rgba(155, 146, 146, 0.6);
+                        background-color: rgba(102, 216, 74, 0.5);
                         padding: 10px 15px;
                       }
                     }
@@ -528,17 +528,59 @@ body {
 .home-header {
   .container {
     .showcase{ 
-      margin-top: -100px;
-      padding: 10px 30px;
+      margin-bottom: 20px;
       .slide-show{
-        width: 100%;
-        margin: auto;
-        .images{ 
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
+      grid-template-rows: auto;
+      grid-gap: 10px;
+      .images{
+        border: 2px solid grey;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+
+        .img{
           img{
-            border-radius: 12px;
             width: 100%;
+            height: 220px;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
           }
         }
+        .name{
+          p{
+            text-align: center;
+            font-size:32px;
+            margin: 0;
+            padding-top: 10px;
+            
+          }
+        }
+        .cate{
+          padding: 0px 7px;
+          p{
+            font-size: 18px;
+            margin: 0;
+          }
+        }
+        .description{
+          p{
+          padding: 0 10px;
+            letter-spacing: 1px;
+          }
+        }
+        .readmore{
+          background-color: rgb(245, 46, 46);
+          text-align: center;
+          a{
+            font-size: 22px;
+            color: #fff;
+            text-transform: capitalize;
+            text-decoration: none;
+            cursor: pointer;
+          }
+        }
+      }
     
       }
     }
@@ -549,12 +591,16 @@ body {
       grid-gap: 10px;
       padding: 20px 10px;
       .images{
-        border: 1px solid grey;
-        border-radius: 7px;
+        border: 2px solid grey;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+
         .img{
           img{
             width: 100%;
             height: auto;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
           }
         }
         .name{
@@ -582,7 +628,6 @@ body {
         .readmore{
           background-color: rgb(245, 46, 46);
           text-align: center;
-
           a{
             font-size: 22px;
             color: #fff;
@@ -911,9 +956,9 @@ body {
           font-size: 44px;
           text-decoration: none;
           text-align: center;
-
+          
           &:hover {
-            color: rgb(219, 217, 217);
+            color: rgb(248, 71, 71);
           }
         }
       }
@@ -922,37 +967,38 @@ body {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: auto;
-      grid-gap: 10px;
-      padding: 15px 30px;
+      padding: 15px 15px;
 
       .nav {
         overflow: hidden;
         a {
           display: block;
-          font-size: 20px;
+          font-size: 18px;
           text-transform: capitalize;
           box-sizing: border-box;
           text-decoration: none;
           color: #fff;
-          padding: 5px 10px;
+          padding: 5px 10px 5px 0px;
 
           &:hover {
-            color:#6c6bb3 ;
+            background-color: rgb(248, 71, 71);;
+            color:#fff ;
           }
         }
         .nav-btn {
           a {
+            font-family: Georgia, 'Times New Roman', Times, serif;
             letter-spacing: 1px;
-            text-shadow: 0px 1px 1px #000;
           }
         }
         .sub-nav {
           a {
             color: rgb(212, 212, 207);
             font-size: 18px;
-
+            width: 50%;
             &:hover {
-                color:#6c6bb3 ;
+              background-color: rgb(248, 71, 71);;
+                color:#ffffff ;
               }
           }
         }

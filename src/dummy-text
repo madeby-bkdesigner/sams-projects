@@ -15,3 +15,4 @@ let data = [
             res.render('./html-pages/home', {posts: posts})
         }
     })
+    https://www.youtube.com/watch?v=kGzwvOFUewY
