@@ -243,7 +243,7 @@ body {
 }
 
 //main-nav
-.nav-header {
+.main-nav-header {
   .nav {
     background:#0099ff;
     
@@ -431,6 +431,99 @@ body {
     }
   }
 }
+//admin-nav
+.admin-nav-header {
+  .nav {
+    background:#0099ff;
+    
+    .container {
+      .main-nav{
+        display: grid;
+        grid-template-columns: 80% 20%;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "menu logo";
+        padding: 0px 10px;
+
+        .logo{
+          grid-area: logo;
+        }
+        .nav-bars {
+          grid-area: menu;
+          overflow: hidden;
+          .hamburger-menu {
+            float: left;
+            i {
+              font-size: 27px;
+              margin-top: 20px;
+              padding-left: 20px;
+              cursor: pointer;
+            }
+          }
+          .small-sc-bar {
+            display: none;
+            overflow: hidden;
+            .links {
+              float: left;
+              box-sizing: border-box;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 50%;
+              height: 100vh;
+              background-color: rgb(244, 248, 242);
+              border: 1px solid grey;
+              border-radius: 3px;
+              
+              .close{
+                text-align: right;
+                padding: 5px 15px 0 0px;
+                span{
+                  color: rgb(233, 99, 99);
+                  font-size: 36px;
+                  cursor: pointer;
+                }
+              }
+              .main-content {
+                display: block;
+                z-index: 1;
+                color: #fff;
+                .subnav {
+                  width: 100%;
+                  .subnav-btn {
+                    margin-top: 20px;
+                    overflow: hidden;
+                    button{
+                      width: 100%;
+                      text-align: left;
+                      clear: both;
+                      font-size: 23px;
+                      text-transform: capitalize;
+                      text-decoration: none;
+                      color: rgb(10, 10, 10);
+                      margin: 10px 0 0 0;
+                      padding: 10px 5px 0 10px;
+                      i{
+                        color: rgb(65, 64, 64);
+                      }
+                      &:hover {
+                        background-color: rgba(247, 114, 114, 0.6);
+                        padding-bottom: 10px;
+                    }
+                    }
+                  }
+
+                }
+              }
+            }
+          }
+          // ////////////////////////////////////////////
+          
+        }
+      }
+    }
+  }
+}
 // Home
 .home-header {
   .container {
@@ -503,8 +596,8 @@ body {
   }
 }
 
-//admin
-.main-admin{
+//signup
+.main-signup{
   background-color: #0099ff;
   background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
   margin: 0;
@@ -528,6 +621,7 @@ body {
                         display: grid;
                         grid-template-columns: repeat(1, 1fr);
                         grid-row-gap: 10px;
+                        margin: 0px 0 15px 0;
                         label{
                             color: #000;
                             font-size: 22px;
@@ -537,12 +631,21 @@ body {
                             padding: 10px;
                             border-radius: 5px;
                             font-size: 20px;
-                            margin: 7px 0;
+                            // margin: 7px 0;
                             border: 1px solid #000;
                         }
-                        .desc{
-                            padding-bottom: 70px;
-                        }
+                    }
+                    .content{
+                      margin: 10px 0 20px 0;
+                      select{
+                        font-size: 18px;
+                        text-transform: capitalize;
+                        line-height: 1.5;
+                        padding: 5px 10px;
+                        border: 1px solid #000;
+                        width: 200px;
+      
+                      }
                     }
 
                     .btn{
@@ -569,6 +672,223 @@ body {
     }
 }
 
+//admin{
+.main-admin{
+  .container{
+    width: 90%;
+    margin: auto;
+    .main-btn{
+      margin: 10px 0 30px 0;
+      text-align: center;
+      button{
+        background-color: #487c7c;
+        color: #fff;
+        font-size: 20px;
+        border: none;
+        border-radius: 7px;
+        text-transform: capitalize;
+        padding: 7px 12px;
+        cursor: pointer;
+        margin: 0 7px;
+      }
+    }
+    .add-post{
+      background-color: rgb(219, 216, 216);
+      border-radius: 12px;
+      .fields{
+        border: 1px solid grey;
+        border-radius: 12px;
+        padding: 0 10px;
+        h1{
+          font-size: 32px;
+          text-align: center;
+          text-transform: capitalize;
+        }
+        form{
+          .content{
+            display: block;
+            label{
+              font-size: 24px;
+              font-weight: normal;
+              text-transform: capitalize;
+            }
+            input{
+              width: 100%;
+              font-size: 20px;
+              border: 1px solid rgb(59, 59, 59);
+              border-radius: 7px;
+              margin-bottom: 10px;
+              padding: 10px ;
+            }
+            
+          }
+          .body-input{
+            width: 100%;
+            p{
+              font-size: 20px;
+              text-transform: capitalize;
+              margin: 0;
+            }
+            textarea{
+              width: 100%;
+              padding: 10px;
+              font-size: 20px;
+              border-radius: 7px;
+            }
+          }
+          .topic{
+            padding: 10px 0;
+            select{
+              text-transform: capitalize;
+              font-size: 18px;
+            }
+          }
+          .btn{
+            margin: 10px 0 0px 0;
+            button{
+              background-color: #487c7c;
+              color: #fff;
+              font-size: 20px;
+              border: none;
+              border-radius: 7px;
+              text-transform: capitalize;
+              padding: 7px 12px;
+              cursor: pointer;
+              margin: 0 7px;
+            }
+          }
+        }
+      }
+    }
+    .manage-post{
+      .title{
+        h1{
+          text-align: center;
+          text-transform: capitalize;
+          font-size: 32px;
+          margin: 10px 0;
+        }
+      }
+      .posts{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+        grid-gap: 10px;
+        padding: 20px 10px;
+        .images{
+          border: 1px solid grey;
+          border-radius: 7px;
+          .img{
+            img{
+              width: 100%;
+              height: auto;
+            }
+          }
+          .name{
+            p{
+              text-align: center;
+              font-size:32px;
+              margin: 0;
+              padding-top: 10px;
+              
+            }
+          }
+          .cate{
+            padding: 0px 7px;
+            p{
+              font-size: 18px;
+              margin: 0;
+            }
+          }
+          .description{
+            p{
+             padding: 0 10px;
+              letter-spacing: 1px;
+            }
+          }
+          .readmore{
+            background-color: rgb(245, 46, 46);
+            text-align: center;
+  
+            a{
+              font-size: 22px;
+              color: #fff;
+              text-transform: capitalize;
+              text-decoration: none;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+//Readmore/show description
+.showdesc-header{
+  .showdesc-sec{
+    margin-top: 20px;
+    .container{
+      width:90%;
+      margin: auto;
+
+      .images{
+        .name{
+          h1{
+            margin: 0;
+            font-size: 27px;
+            text-transform: capitalize; 
+          }
+        }
+        .img{
+          img{
+              width: 100%;
+              border-radius: 7px;
+          }
+        }
+        .cate{
+          p{
+            font-size: 16px;
+            text-transform: capitalize;
+          }
+        }
+        .description{
+          p{
+            font-size: 18px;
+            letter-spacing: 0.5px;
+            color: rgb(26, 25, 25);
+            line-height: 1.5em;
+          }
+        }
+      }
+    }
+  }
+}
+
+//message
+
+.message-container {
+  width: 85%;
+  margin: 10px auto;
+  .success {
+    background-color: rgb(69, 216, 69);
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 10px 20px;
+    color: rgb(26, 90, 17);
+    margin: 10px 0;
+  }
+  .danger {
+    background-color: rgb(228, 96, 96);
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 10px 20px;
+    color: rgb(66, 22, 24);
+  }
+}
 //footer
 .main-footer {
     margin: 100px 0 0 0;

@@ -1,0 +1,75 @@
+<%- include ('../partials/header') %> 
+<%- include ('../partials/admin-nav') %> 
+
+    <section class="main-admin">
+        <div class="container">
+            <div class="main-btn">
+                <button class="add-post-btn">add post</button>
+                <button class="manage-post-btn">manage post</button>
+            </div>
+            <section class="add-post">
+                    <div class="fields">
+                        <h1>create a post</h1>
+                        <form action="/" method="POST">
+                            <div class="content">
+                                <label for="title">title</label>
+                                <input type="text" name="title" required>
+                            </div>
+                            <div class="content">
+                                <label for="image">image</label>
+                                <input type="text" name="image" required>
+                            </div>
+                            <div class="body-input">
+                                <p>body</p>
+                                <textarea name="body" id="" cols="30" rows="10"></textarea>
+                            </div>
+                            <div class="topic">
+                                <select name="topic" id="">
+                                    <option value="0">topics</option>
+                                    <option value="animals">animals</option>
+                                    <option value="funfacts">funfacts</option>
+                                    <option value="nature">nature</option>
+                                    <option value="movies">movies and shows</option>
+                                    <option value="science">science</option>
+                                </select>
+                            </div>
+                            <div class="btn">
+                                <button type="submit">add post</button>
+                            </div>
+                        </form>
+                    </div>
+            </section>
+            <section class="manage-post">
+                <div class="title">
+                    <h1>manage posts</h1>
+                </div>
+                <section class="posts">
+                    <% if(posts){%>
+                        <% posts.forEach(post=>{ %>
+                            <div class="images">
+                                <div class="img">
+                                    <img src="<%= post.image%>" alt="">
+                                </div>
+                                <div class="name">
+                                    <p><%= post.name%></p>
+                                </div>
+                                <div class="cate">
+                                    <p><%= post.topic%></p>
+                                </div>
+                                <div class="description">
+                                    <p><%= post.body.substring(0, 150)%></p>
+                                </div>
+                                <div class="readmore">
+                                    <a href="readmore/<%= post._id%>">readmore</a>
+                                </div>
+                            </div>
+                        <% }) %> 
+                    <% } %> 
+                </section>
+            </section>
+        </div>
+    </section>
+
+
+
+<%- include ('../partials/footer') %> 

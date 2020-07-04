@@ -54,6 +54,25 @@ function slideShow() {
     if(slides > mySlides.length){
         slides = 1
     }
-    mySlides[slides-1].style.display = 'block'
+    $(mySlides[slides - 1]).css('display', 'block')
     setTimeout(slideShow, 2500)
 }
+
+/////////////////// Admin /////////////////////////////
+let addPostBtn = $('.add-post-btn')
+let managePostBtn = $('.manage-post-btn')
+let addPost = $('.add-post')
+let managePost = $('.manage-post')
+
+$(addPost).css('display', 'none')
+
+$(managePostBtn).on('click', e => {
+    $(addPost).slideUp(1000)
+    $(managePost).slideDown(1000)
+
+})
+$(addPostBtn).on('click', e => {
+    $(managePost).slideUp(1000)
+    $(addPost).slideDown(1000)
+    
+})

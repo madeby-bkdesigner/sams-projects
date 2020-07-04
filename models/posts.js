@@ -1,10 +1,10 @@
 let mongoose = require('mongoose');
 
 let postsSchema = new mongoose.Schema({
+    title: String,
     image: String,
-    name: String,
-    desc: String,
-    category: String,
+    body: String,
+    topic: String,
     author: {
         id: {
             type: mongoose.Schema.Types.ObjectId,
