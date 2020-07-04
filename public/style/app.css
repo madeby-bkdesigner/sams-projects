@@ -1010,6 +1010,7 @@ body {
 .message-container {
   width: 85%;
   margin: 10px auto;
+  background-color: #0099ff;
 }
 
 .message-container .success {
@@ -1018,7 +1019,7 @@ body {
   font-size: 18px;
   font-weight: normal;
   padding: 10px 20px;
-  color: #1a5a11;
+  color: #101110;
   margin: 10px 0;
 }
 

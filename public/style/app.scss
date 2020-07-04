@@ -916,13 +916,14 @@ body {
 .message-container {
   width: 85%;
   margin: 10px auto;
+  background-color: #0099ff;
   .success {
     background-color: rgb(69, 216, 69);
     border-radius: 10px;
     font-size: 18px;
     font-weight: normal;
     padding: 10px 20px;
-    color: rgb(26, 90, 17);
+    color: rgb(16, 17, 16);
     margin: 10px 0;
   }
   .danger {
