@@ -5,6 +5,11 @@ let postsSchema = new mongoose.Schema({
     image: String,
     body: String,
     topic: String,
+    optgroup: String,
+    date:{
+        type: Date,
+        default: Date.now
+    },
     author: {
         id: {
             type: mongoose.Schema.Types.ObjectId,

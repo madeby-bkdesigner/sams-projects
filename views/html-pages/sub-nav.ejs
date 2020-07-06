@@ -1,0 +1,44 @@
+<%- include ('../partials/header') %> 
+<%- include ('../partials/main-nav') %> 
+
+<header class="subnav-header">
+    <div class="container">
+        <!-- ///////////////////////////////////////////// -->
+
+        <section class="posts">
+            <div class="title">
+                <hr><hr><h1> science & nature </h1><hr><hr>
+            </div>
+            <div class="posts-div">
+                <% if(posts){%>
+                    <% posts.forEach(post=>{ %>
+                        <div class="images">
+                            <div class="img">
+                                <img src="<%= post.image%>" alt="">
+                            </div>
+                            <div class="name">
+                                <p><%= post.name%></p>
+                            </div>
+                            <div class="topic">
+                                <p><%= post.topic%></p>
+                            </div>
+                            <div class="body">
+                                <p><%- post.body.substring(0, 150)%></p>
+                            </div>
+                            <div class="readmore">
+                                <a href="readmore/<%= post._id%>">readmore</a>
+                            </div>
+                        </div>
+                    <% }) %> 
+                <% } %> 
+            </div>
+        </section>
+        
+    </div>
+</header>
+
+
+
+
+
+<%- include ('../partials/footer') %> 

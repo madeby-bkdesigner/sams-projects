@@ -8,7 +8,7 @@ let express = require('express'),
     localStragety = require('passport-local'),
     passportLocalMongoose = require('passport-local-mongoose'),
     flash = require('connect-flash'),
-    methodOverride = require('method-override'),
+    methodOverride = require('method-override'),ap
     app = express();
 
     // import Routes

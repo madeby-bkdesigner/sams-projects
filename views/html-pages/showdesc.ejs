@@ -4,21 +4,81 @@
     <header class="showdesc-header">
         <section class="showdesc-sec">
             <div class="container">
+                <div class="links">
+                    
+                    <% if(foundPost.topic){ %>
+                        <i class="fas fa-angle-right his"></i><a class="showdesc-link his" href="/history/<%= foundPost.topic%>"><%= foundPost.topic%></a>
+
+                    <%}else{%>
+                        <i class="fas fa-angle-right enter"></i><a class="showdesc-link enter test" href="/entertainment/<%= foundPost.topic%>"><%= foundPost.topic%></a>
+                        <i class="fas fa-angle-right sc"></i><a class="showdesc-link sc" href="/science&nature/<%= foundPost.topic%>"><%= foundPost.topic%></a>
+                    <%} %>
+
+                </div>
                 <div class="images">
-                    <div class="name">
-                        <h1><%= foundPost.name %> </h1>
+                    <div class="post-title">
+                        <h1><%= foundPost.title %> </h1>
                     </div>
                     <div class="img">
                         <img src="<%= foundPost.image%>" alt="">
                     </div>
-                    <div class="cate">
-                        <p><%= foundPost.topic %> </p>
+                    <div class="grid">
+                        <div class="topic">
+                            <p><%= foundPost.topic %> </p>
+                        </div>
+                        <!-- <div class="date">
+                            <p><%= foundPost.date %> </p>
+                        </div> -->
                     </div>
-                    <div class="description">
-                        <p><%= foundPost.body %> </p>
+                    
+                    <% if(currentuser){ %>
+                        <div class="btns">
+                            <button class="edit-btn"><a href="/edit/<%= foundPost._id%>">edit</a></button>
+
+                            <form action="/readmore/<%= foundPost._id%>?_method=DELETE" method="POST">
+                                <button type="submit">delete</button>
+                            </form>
+                        </div>
+                    <%} %> 
+
+                    <div class="body">
+                        <p><%- foundPost.body %> </p>
                     </div>
+                
 
                 </div>
+            </div>
+        </section>
+        <!-- ///////////////// -->
+        
+        <section class="recent-posts">
+            <div class="container">
+                <div class="title">
+                    <hr><hr><h1>recent posts </h1><hr><hr>
+                </div>
+                <div class="recent-posts-div">
+                    <% if(posts){%>
+                        <% posts.forEach(post=>{ %>
+                                <div class="images">
+                                    <div class="img">
+                                        <img src="<%= post.image%>" alt="">
+                                    </div>
+                                    <div class="name">
+                                        <p><%= post.name%></p>
+                                    </div>
+                                    <div class="topic">
+                                        <p><%= post.topic%></p>
+                                    </div>
+                                    <div class="body">
+                                        <p><%- post.body.substring(0, 150)%></p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a href="/readmore/<%= post._id%>">readmore</a>
+                                    </div>
+                                </div>
+                            <% }) %> 
+                        <% } %> 
+                    </div>
             </div>
         </section>
     </header>

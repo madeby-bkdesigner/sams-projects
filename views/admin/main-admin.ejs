@@ -119,16 +119,27 @@
                             </div>
                             <div class="body-input">
                                 <p>body</p>
-                                <textarea name="body" id="" cols="30" rows="10"></textarea>
+                                <textarea name="body" id="body"></textarea>
                             </div>
                             <div class="topic">
-                                <select name="topic" id="">
-                                    <option value="0">topics</option>
-                                    <option value="animals">animals</option>
-                                    <option value="funfacts">funfacts</option>
-                                    <option value="nature">nature</option>
-                                    <option value="movies">movies and shows</option>
-                                    <option value="science">science</option>
+                                <select name="topic" id="topic">
+                                    <optgroup class="optgroup" label="entertainment">
+                                        <option value="funfacts">funfacts</option>
+                                        <option value="funfacts">movies and shows</option>
+                                        <option value="funfacts">technology</option>
+                                        <option value="funfacts">sports & games</option>
+                                    </optgroup>                                   
+                                    <optgroup class="optgroup" label="science & nature">
+                                        <option value="animals">animals</option>
+                                        <option value="animals">environment</option>
+                                        <option value="animals">physics</option>
+                                        <option value="animals">body & health</option>
+
+                                    </optgroup>
+                                    <optgroup class="optgroup" label="history">
+                                        <option value="historic events">historic events</option>
+                                        <option value="people & civilization">people & civilization</option>
+                                    </optgroup> 
                                 </select>
                             </div>
                             <div class="btn">
@@ -137,6 +148,7 @@
                         </form>
                     </div>
             </section>
+            <!-- second section/////////////////////////////////////// -->
             <section class="manage-post">
                 <div class="title">
                     <h1>manage posts</h1>
@@ -151,14 +163,14 @@
                                 <div class="name">
                                     <p><%= post.name%></p>
                                 </div>
-                                <div class="cate">
+                                <div class="topic">
                                     <p><%= post.topic%></p>
                                 </div>
-                                <div class="description">
-                                    <p><%= post.body.substring(0, 150)%></p>
+                                <div class="body">
+                                    <p><%- post.body.substring(0, 150)%></p>
                                 </div>
                                 <div class="readmore">
-                                    <a href="readmore/<%= post._id%>">readmore</a>
+                                    <a href="/readmore/<%= post._id%>">readmore</a>
                                 </div>
                             </div>
                         <% }) %> 
