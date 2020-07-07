@@ -5,15 +5,7 @@
         <section class="showdesc-sec">
             <div class="container">
                 <div class="links">
-                    
-                    <% if(foundPost.topic){ %>
-                        <i class="fas fa-angle-right his"></i><a class="showdesc-link his" href="/history/<%= foundPost.topic%>"><%= foundPost.topic%></a>
-
-                    <%}else{%>
-                        <i class="fas fa-angle-right enter"></i><a class="showdesc-link enter test" href="/entertainment/<%= foundPost.topic%>"><%= foundPost.topic%></a>
-                        <i class="fas fa-angle-right sc"></i><a class="showdesc-link sc" href="/science&nature/<%= foundPost.topic%>"><%= foundPost.topic%></a>
-                    <%} %>
-
+                    <a href="/<%= topicLink%>"><%= topicLink %> </a> <i class="fas fa-angle-right his"></i><a class="showdesc-link his" href="/<%= topicLink %>/<%= foundPost.topic%>"><%= foundPost.topic%></a>
                 </div>
                 <div class="images">
                     <div class="post-title">

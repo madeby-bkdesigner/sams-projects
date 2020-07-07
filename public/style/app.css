@@ -50,8 +50,8 @@ body {
 .nav-header .nav .container .main-nav .nav-bars .small-sc-bar .links {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 60% 40%;
-      grid-template-columns: 60% 40%;
+  -ms-grid-columns: 70% 30%;
+      grid-template-columns: 70% 30%;
   float: left;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -338,8 +338,8 @@ body {
 .main-nav-header .nav .container .main-nav .nav-bars .small-sc-bar .links {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 60% 40%;
-      grid-template-columns: 60% 40%;
+  -ms-grid-columns: 70% 30%;
+      grid-template-columns: 70% 30%;
   float: left;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -766,13 +766,13 @@ body {
   cursor: pointer;
 }
 
-.main-signup {
+.main-signup, .main-contact {
   background-color: #0099ff;
   background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
   margin: 0;
 }
 
-.main-signup .container {
+.main-signup .container, .main-contact .container {
   max-width: 85%;
   margin: auto;
   display: -webkit-box;
@@ -789,18 +789,18 @@ body {
       align-content: center;
 }
 
-.main-signup .container .main-sec {
+.main-signup .container .main-sec, .main-contact .container .main-sec {
   position: relative;
   bottom: 70px;
 }
 
-.main-signup .container .main-sec .form {
-  background-color: ivory;
+.main-signup .container .main-sec .form, .main-contact .container .main-sec .form {
+  background-color: #f8f8f8;
   padding: 10px;
   border-radius: 7px;
 }
 
-.main-signup .container .main-sec .form form .content {
+.main-signup .container .main-sec .form form .content, .main-contact .container .main-sec .form form .content {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[1];
@@ -809,24 +809,24 @@ body {
   margin: 0px 0 15px 0;
 }
 
-.main-signup .container .main-sec .form form .content label {
+.main-signup .container .main-sec .form form .content label, .main-contact .container .main-sec .form form .content label {
   color: #000;
   font-size: 22px;
   text-transform: capitalize;
 }
 
-.main-signup .container .main-sec .form form .content input {
+.main-signup .container .main-sec .form form .content input, .main-contact .container .main-sec .form form .content input {
   padding: 10px;
   border-radius: 5px;
   font-size: 20px;
   border: 1px solid #000;
 }
 
-.main-signup .container .main-sec .form form .content {
+.main-signup .container .main-sec .form form .content, .main-contact .container .main-sec .form form .content {
   margin: 10px 0 20px 0;
 }
 
-.main-signup .container .main-sec .form form .content select {
+.main-signup .container .main-sec .form form .content select, .main-contact .container .main-sec .form form .content select {
   font-size: 18px;
   text-transform: capitalize;
   line-height: 1.5;
@@ -835,12 +835,12 @@ body {
   width: 200px;
 }
 
-.main-signup .container .main-sec .form form .btn {
+.main-signup .container .main-sec .form form .btn, .main-contact .container .main-sec .form form .btn {
   width: 95%;
   margin: auto;
 }
 
-.main-signup .container .main-sec .form form .btn button {
+.main-signup .container .main-sec .form form .btn button, .main-contact .container .main-sec .form form .btn button {
   padding: 10px;
   border: none;
   background-color: #4f58da;
@@ -851,8 +851,34 @@ body {
   cursor: pointer;
 }
 
-.main-signup .container .main-sec .form form .btn button:hover {
-  background-color: #1a4c4c;
+.main-signup .container .main-sec .form form .btn button:hover, .main-contact .container .main-sec .form form .btn button:hover {
+  background-color: #829494;
+}
+
+.main-signup .container .main-sec .form form .textarea textarea, .main-contact .container .main-sec .form form .textarea textarea {
+  border-radius: 5px;
+  width: 100%;
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
+.main-signup .container .main-sec .form form .contact-btn, .main-contact .container .main-sec .form form .contact-btn {
+  width: 50%;
+  margin-top: 10px;
+}
+
+.main-signup .container .main-sec .form form .contact-btn button, .main-contact .container .main-sec .form form .contact-btn button {
+  border: none;
+  background-color: #4f58da;
+  font-size: 24px;
+  border-radius: 7px;
+  text-transform: capitalize;
+  color: #fff;
+  cursor: pointer;
+}
+
+.main-signup .container .main-sec .form form .contact-btn button:hover, .main-contact .container .main-sec .form form .contact-btn button:hover {
+  background-color: #829494;
 }
 
 .main-admin .container {
@@ -1034,6 +1060,7 @@ body {
 }
 
 .showdesc-header .showdesc-sec .links i {
+  padding-left: 3px;
   color: #3d3d3d;
 }
 
@@ -1050,13 +1077,17 @@ body {
   border-radius: 7px;
 }
 
+.showdesc-header .showdesc-sec .images .topic {
+  width: 40%;
+}
+
 .showdesc-header .showdesc-sec .images .topic p {
   font-size: 16px;
   text-transform: capitalize;
   background-color: #0099ff;
   padding: 5px 10px;
   text-align: center;
-  width: 100px;
+  width: auto;
   color: #fff;
   border-radius: 7px;
   margin: 10px 0;
@@ -1195,11 +1226,11 @@ body {
   cursor: pointer;
 }
 
-.subnav-header .container .posts .title {
+.subnav-header .container .posts .header .title {
   margin: 10px 20px 35px 20px;
 }
 
-.subnav-header .container .posts .title h1 {
+.subnav-header .container .posts .header .title h1 {
   font-size: 26px;
   text-align: center;
   text-transform: capitalize;
@@ -1211,10 +1242,35 @@ body {
   margin: 5px 25px;
 }
 
-.subnav-header .container .posts .title hr {
+.subnav-header .container .posts .header .title hr {
   border: 1px solid #052505;
   border-radius: 50%;
   margin: 5px 0;
+}
+
+.subnav-header .container .posts .header .sub-links {
+  margin: 10px 20px 30px 20px;
+}
+
+.subnav-header .container .posts .header .sub-links .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.subnav-header .container .posts .header .sub-links .links a {
+  margin: 10px;
+  font-size: 20px;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: #fff;
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 7px;
 }
 
 .subnav-header .container .posts .posts-div {
@@ -1294,7 +1350,7 @@ body {
   font-size: 18px;
   font-weight: normal;
   padding: 10px 20px;
-  color: #421618;
+  color: white;
 }
 
 .main-footer {
@@ -1333,11 +1389,14 @@ body {
 .main-footer .container .nav-bars {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   -ms-grid-rows: auto;
       grid-template-rows: auto;
+  grid-gap: 20px 10px;
   padding: 15px 15px;
+  width: 85%;
+  margin: auto;
 }
 
 .main-footer .container .nav-bars .nav {
@@ -1362,13 +1421,13 @@ body {
 
 .main-footer .container .nav-bars .nav .nav-btn a {
   font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
   letter-spacing: 1px;
 }
 
 .main-footer .container .nav-bars .nav .sub-nav a {
-  color: #d4d4cf;
+  color: #ebebe4;
   font-size: 18px;
-  width: 50%;
 }
 
 .main-footer .container .nav-bars .nav .sub-nav a:hover {

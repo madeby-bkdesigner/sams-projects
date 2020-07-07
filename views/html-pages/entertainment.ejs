@@ -6,8 +6,18 @@
         <!-- ///////////////////////////////////////////// -->
 
         <section class="posts">
-            <div class="title">
-                <hr><hr><h1> science & nature </h1><hr><hr>
+            <div class="header">
+                <div class="title">
+                    <hr><hr><h1> entertainment </h1><hr><hr>
+                </div>
+                <div class="sub-links">
+                    <div class="links">
+                        <a href="/entertainment/funfacts">funfacts</a>
+                        <a href="/entertainment/movies%20&%20shows">movies & shows</a>
+                        <a href="/entertainment/technology">technology</a>
+                        <a href="/entertainment/sports%20&%20games">sports & games</a>
+                    </div>
+                </div>
             </div>
             <div class="posts-div">
                 <% if(posts){%>
@@ -26,7 +36,7 @@
                                 <p><%- post.body.substring(0, 150)%></p>
                             </div>
                             <div class="readmore">
-                                <a href="readmore/<%= post._id%>">readmore</a>
+                                <a href="/readmore/<%= post._id%>">readmore</a>
                             </div>
                         </div>
                     <% }) %> 

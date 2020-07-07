@@ -37,7 +37,7 @@ body {
             overflow: hidden;
             .links {
               display: grid;
-              grid-template-columns: 60% 40%;
+              grid-template-columns: 70% 30%;
               float: left;
               box-sizing: border-box;
               position: absolute;
@@ -263,6 +263,7 @@ body {
 
         .logo{
           grid-area: logo;
+          
         }
         .nav-bars {
           overflow: hidden;
@@ -280,7 +281,7 @@ body {
             overflow: hidden;
             .links {
               display: grid;
-              grid-template-columns: 60% 40%;
+              grid-template-columns: 70% 30%;
               float: left;
               box-sizing: border-box;
               position: absolute;
@@ -676,7 +677,7 @@ body {
 }
 
 //signup
-.main-signup{
+.main-signup, .main-contact{
   background-color: #0099ff;
   background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
   margin: 0;
@@ -692,7 +693,7 @@ body {
           position: relative;
           bottom: 70px;
           .form{
-                background-color: ivory;
+                background-color: rgb(248, 248, 248);
                 padding: 10px;
                 border-radius: 7px;
                 form{
@@ -741,9 +742,34 @@ body {
                             cursor: pointer;
 
                             &:hover{
-                                background-color: #1a4c4c;
+                                background-color: #829494;
                             }
                         }
+                    }
+                    .textarea{
+                      textarea{
+                        border-radius: 5px;
+                        width: 100%;
+                        padding: 5px 10px;
+                        font-size: 16px;
+                      }
+                    }
+                    .contact-btn{
+                      width: 50%;
+                      margin-top: 10px;
+                      button{
+                        border: none;
+                        background-color: #4f58da;
+                        font-size: 24px;
+                        border-radius: 7px;
+                        text-transform: capitalize;
+                        color: #fff;
+                        cursor: pointer;
+
+                        &:hover{
+                            background-color: #829494;
+                        }
+                      }
                     }
                 }
             }
@@ -925,6 +951,7 @@ body {
         padding-left: 7px;
       }
       i{
+        padding-left: 3px ;
         color: rgb(61, 61, 61);
       }
     }
@@ -945,6 +972,7 @@ body {
         }
       }
       .topic{
+        width: 40%;
 
         p{
           font-size: 16px;
@@ -952,7 +980,7 @@ body {
           background-color: #0099ff;
           padding: 5px 10px;
           text-align: center;
-          width: 100px;
+          width: auto;
           color: #fff;
           border-radius: 7px;
           margin: 10px 0;
@@ -1090,24 +1118,47 @@ body {
   .container {
     
     .posts{
-      .title{
-        margin:10px 20px 35px 20px;
-        h1{
-          font-size: 26px;
-          text-align: center;
-          text-transform: capitalize;
-          background: linear-gradient(90deg, #5550eb 0%, #00ff88 100%);
-          padding: 5px 0;
-          border-radius: 21px;
-          color: #fff;
-          margin: 5px 25px;
+      .header{
+        .title{
+          margin:10px 20px 35px 20px;
+          h1{
+            font-size: 26px;
+            text-align: center;
+            text-transform: capitalize;
+            background: linear-gradient(90deg, #5550eb 0%, #00ff88 100%);
+            padding: 5px 0;
+            border-radius: 21px;
+            color: #fff;
+            margin: 5px 25px;
+          }
+          hr{
+            border: 1px solid rgb(5, 37, 5);
+            border-radius: 50%;
+            margin: 5px 0;
+          }
         }
-        hr{
-          border: 1px solid rgb(5, 37, 5);
-          border-radius: 50%;
-          margin: 5px 0;
+
+        .sub-links{
+          margin: 10px 20px 30px 20px;
+          .links{
+            display: flex;
+            flex-wrap: wrap;
+            a{
+              margin: 10px ;
+              font-size: 20px;
+              text-transform: capitalize;
+              text-decoration: none;
+              color: #fff;
+              background-color: #0093E9;
+              background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+              padding: 10px 20px;
+              cursor: pointer;       
+              border-radius: 7px;
+            }
+          }
         }
       }
+
 
       .posts-div{
         display: grid;
@@ -1186,9 +1237,14 @@ body {
     font-size: 18px;
     font-weight: normal;
     padding: 10px 20px;
-    color: rgb(66, 22, 24);
+    color: rgb(255, 255, 255);
   }
 }
+
+// .contact us
+
+
+
 //footer
 .main-footer {
     margin: 100px 0 0 0;
@@ -1220,9 +1276,12 @@ body {
     }
     .nav-bars {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       grid-template-rows: auto;
+      grid-gap: 20px 10px;
       padding: 15px 15px;
+      width: 85%;
+      margin: auto;
 
       .nav {
         overflow: hidden;
@@ -1243,14 +1302,14 @@ body {
         .nav-btn {
           a {
             font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
             letter-spacing: 1px;
           }
         }
         .sub-nav {
           a {
-            color: rgb(212, 212, 207);
+            color: rgb(235, 235, 228);
             font-size: 18px;
-            width: 50%;
             &:hover {
               background-color: rgb(248, 71, 71);;
                 color:#ffffff ;

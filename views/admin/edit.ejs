@@ -16,15 +16,28 @@
                             </div>
                             <div class="body-input">
                                 <p>body</p>
-                                <textarea name="body" id="body" cols="30" rows="10"><%= post.body%></textarea>
+                                <textarea name="body" id="body" required><%= post.body%></textarea>
                             </div>
                             <div class="topic">
-                                <select name="topic" id="">
-                                    <option value="animals">animals</option>
-                                    <option value="funfacts">funfacts</option>
-                                    <option value="nature">nature</option>
-                                    <option value="movies">movies and shows</option>
-                                    <option value="science">science</option>
+                                <select name="topic" id="topic" required>
+                                    <option value="">none</option>
+                                    <optgroup class="optgroup" label="entertainment">
+                                        <option value="funfacts">funfacts</option>
+                                        <option value="movies & shows">movies & shows</option>
+                                        <option value="technology">technology</option>
+                                        <option value="sports & games">sports & games</option>
+                                    </optgroup>                                   
+                                    <optgroup class="optgroup" label="science & nature">
+                                        <option value="animals">animals</option>
+                                        <option value="environment">environment</option>
+                                        <option value="physics">physics</option>
+                                        <option value="body & health">body & health</option>
+
+                                    </optgroup>
+                                    <optgroup class="optgroup" label="history">
+                                        <option value="historic events">historic events</option>
+                                        <option value="people & civilization">people & civilization</option>
+                                    </optgroup> 
                                 </select>
                             </div>
                             <div class="btn">

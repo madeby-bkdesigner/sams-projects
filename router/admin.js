@@ -27,7 +27,6 @@ router.post('/', (req, res) => {
         if (err) {
             log(err)
         } else {
-            log(req)
             res.redirect('/admin')
         }
     })
@@ -50,6 +49,7 @@ router.put('/readmore/:id',(req, res)=>{
         if(err){
             log(err)
         }else{
+            log(updatedpost)
             res.redirect('/readmore/' + req.params.id)
         }
     })
