@@ -1,185 +1,200 @@
 <%- include ('../partials/header') %> 
-<header class="admin-nav-header">
-    <nav class="nav">
+<div class="split-aside">
+    <header class="admin-nav-header">
+        <nav class="nav">
+            
+            <div class="container">
+                <div class="main-nav">
+                    <div class="logo">
+                        <a href="/"><img src="/public/images/logo.png" width="70px" height="70px" alt=""></a>
+                    </div>
         
-        <div class="container">
-            <div class="main-nav">
-                <div class="logo">
-                    <a href="/"><img src="/public/images/logo.png" width="70px" height="70px" alt=""></a>
-                </div>
-    
-                <div class="nav-bars">
-                    <div class="hamburger-menu">
-                        <span class="menu"><i class="fas fa-bars burger-menu"></i></span>
-                    </div>
-                    <div class="small-sc-bar">
-                        <div class="links">
-                            <div class="close">
-                                <span class="burger-close"><i class="fas fa-times"></i></span>
-                            </div>
-                            <div class="main-content">
-                                    
-                                <div class="subnav">
-                                    <div class="subnav-btn">
-                                        <button><i class="fas fa-blog"></i> manage posts</button>
-                                    </div>
-                                    
-                                </div>
-                                
-                                <div class="subnav">
-                                    <div class="subnav-btn">
-                                        <button><i class="fas fa-users"></i> manage users</button>
-                                     </div>
-                                    
-                                </div>
-                                
-                                <div class="subnav">
-                                    <div class="subnav-btn">
-                                        <button> <i class="fas fa-user-shield"></i>  user data</button>
-                                    </div>
-                                    
-                                </div>
-                                
-                            </div>
-
+                    <div class="nav-bars">
+                        <div class="hamburger-menu">
+                            <span class="menu"><i class="fas fa-bars burger-menu"></i></span>
                         </div>
-                    </div>
-                    <!-- <div class="big-sc-bar">
-                        <div class="links">
-                            <div class="subnav">
-                                <a class="subnav-btn" href="#">home</a>
-                            </div>
-                            <div class="subnav">
-                                <a class="subnav-btn" href="#">entertainment <i class="fas fa-sort-down"></i></a>
-                                <div class="subnav-content">
-                                    <a href="#">lorem1</a>
-                                    <a href="#">lorem2</a>
-                                    <a href="#">lorem3</a>
-                                    <a href="#">lorem4</a>
-                                </div>
-                            </div>
-                            
-                            <div class="subnav">
-                                <a class="subnav-btn" href="#">history <i class="fas fa-sort-down"></i></a>
-                                <div class="subnav-content">
-                                    <a href="#">Hlorem1</a>
-                                    <a href="#">Hlorem2</a>
-                                    <a href="#">Hlorem3</a>
-                                    <a href="#">Hlorem4</a>
-                                </div>
-                            </div>
-                            
-                            <div class="subnav">
-                                <a class="subnav-btn" href="#">science & nature <i class="fas fa-sort-down"></i></a>
-                                <div class="subnav-content">
-                                    <a href="#">sclorem1</a>
-                                    <a href="#">sclorem2</a>
-                                    <a href="#">sclorem3</a>
-                                    <a href="#">sclorem4</a>
+                        <div class="small-sc-bar">
+                            <div class="links">
+                                   
+                                    <div class="main-content">
+                                        <div class="user" >
+                                            <i class="far fa-user-circle"></i><a href="#"><%= currentuser.name %> </a>
+                                            <div class="logout">
+                                                <a href="/logout">logout</a>
+                                            </div>
+                                        </div>
+                                            
+                                        <div class="subnav">
+                                            <div class="subnav-btn">
+                                                <button><i class="fas fa-blog"></i> manage posts</button>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                        <div class="subnav">
+                                            <div class="subnav-btn">
+                                                <button><i class="fas fa-users"></i> manage users</button>
+                                             </div>
+                                            
+                                        </div>
+                                        
+                                        <div class="subnav">
+                                            <div class="subnav-btn">
+                                                <button> <i class="fas fa-user-shield"></i>  user data</button>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                    </div>
+    
+                                <div class="transparent">
+                                    <span class="burger-close"><i class="fas fa-times"></i></span>
                                 </div>
                             </div>
                         </div>
-                    </div> -->
-                </div>
-            </div>
-    </nav>
-
-    <div class="message-container">
-        <% if(error && error.length > 0){ %>
-        <div class="message danger">
-          <%= error%>
-        </div>
-        <% } %>
+                        <div class="big-sc-bar ">
+                            <div class="links">
+                                   
+                                    <div class="main-content">
+                                        <div class="user" >
+                                            <i class="far fa-user-circle"></i><a href="#"><%= currentuser.name %> </a>
+                                            <% console.log(currentuser) %> 
+                                            <div class="logout">
+                                                <a href="/logout">logout</a>
+                                            </div>
+                                        </div>
+                                            
+                                        <div class="subnav">
+                                            <div class="subnav-btn">
+                                                <button><i class="fas fa-blog"></i> manage posts</button>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                        <div class="subnav">
+                                            <div class="subnav-btn">
+                                                <button><i class="fas fa-users"></i> manage users</button>
+                                             </div>
+                                            
+                                        </div>
+                                        
+                                        <div class="subnav">
+                                            <div class="subnav-btn">
+                                                <button> <i class="fas fa-user-shield"></i>  user data</button>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                    </div>
     
-        <% if(success && success.length > 0){ %>
-        <div class="message success ">
-          <%= success%>
-        </div>
-        <% } %>
-    </div>
-</header>
-<!-- =============================================================== -->
-    <section class="main-admin">
-        <div class="container">
-            <div class="main-btn">
-                <button class="add-post-btn">add post</button>
-                <button class="manage-post-btn">manage post</button>
-            </div>
-            <section class="add-post">
-                    <div class="fields">
-                        <h1>create a post</h1>
-                        <form action="/" method="POST">
-                            <div class="content">
-                                <label for="title">title</label>
-                                <input type="text" name="title" required>
-                            </div>
-                            <div class="content">
-                                <label for="image">image</label>
-                                <input type="text" name="image" required>
-                            </div>
-                            <div class="body-input">
-                                <p>body</p>
-                                <textarea name="body" id="body"></textarea>
-                            </div>
-                            <div class="topic">
-                                <select name="topic" id="topic" required>
-                                    <option value="">none</option>
-                                    <optgroup class="optgroup" label="entertainment">
-                                        <option value="funfacts">funfacts</option>
-                                        <option value="movies & shows">movies and shows</option>
-                                        <option value="technology">technology</option>
-                                        <option value="sports & games">sports & games</option>
-                                    </optgroup>                                   
-                                    <optgroup class="optgroup" label="science & nature">
-                                        <option value="animals">animals</option>
-                                        <option value="environment">environment</option>
-                                        <option value="physics">physics</option>
-                                        <option value="body & health">body & health</option>
-
-                                    </optgroup>
-                                    <optgroup class="optgroup" label="history">
-                                        <option value="historic events">historic events</option>
-                                        <option value="people & civilization">people & civilization</option>
-                                    </optgroup> 
-                                </select>
-                            </div>
-                            <div class="btn">
-                                <button type="submit">add post</button>
-                            </div>
-                        </form>
-                    </div>
-            </section>
-            <!-- second section/////////////////////////////////////// -->
-            <section class="manage-post">
-                <div class="title">
-                    <h1>manage posts</h1>
-                </div>
-                <section class="posts">
-                    <% if(posts){%>
-                        <% posts.forEach(post=>{ %>
-                            <div class="images">
-                                <div class="img">
-                                    <img src="<%= post.image%>" alt="">
+                                <div class="transparent">
+                                    <span class="burger-close"><i class="fas fa-times"></i></span>
                                 </div>
-                                <div class="name">
-                                    <p><%= post.name%></p>
+                            </div>
+                        </div>
+                    </div>
+                        
+                </div>
+        </nav>
+    
+        <div class="message-container">
+            <% if(error && error.length > 0){ %>
+            <div class="message danger">
+              <%= error%>
+            </div>
+            <% } %>
+        
+            <% if(success && success.length > 0){ %>
+            <div class="message success ">
+              <%= success%>
+            </div>
+            <% } %>
+        </div>
+    </header>
+    <!-- =============================================================== -->
+        <section class="main-admin">
+            <div class="container">
+                <div class="main-btn">
+                    <button class="add-post-btn">add post</button>
+                    <button class="manage-post-btn">manage post</button>
+                </div>
+                <section class="add-post">
+                        <div class="fields">
+                            <h1>create a post</h1>
+                            <form action="/" method="POST">
+                                <div class="content">
+                                    <label for="title">title</label>
+                                    <input type="text" name="title" required>
+                                </div>
+                                <div class="content">
+                                    <label for="image">image</label>
+                                    <input type="text" name="image" required>
+                                </div>
+                                <div class="body-input">
+                                    <p>body</p>
+                                    <textarea name="body" id="body"></textarea>
                                 </div>
                                 <div class="topic">
-                                    <p><%= post.topic%></p>
+                                    <select name="topic" id="topic" required>
+                                        <option value="">none</option>
+                                        <optgroup class="optgroup" label="entertainment">
+                                            <option value="funfacts">funfacts</option>
+                                            <option value="movies & shows">movies and shows</option>
+                                            <option value="technology">technology</option>
+                                            <option value="sports & games">sports & games</option>
+                                        </optgroup>                                   
+                                        <optgroup class="optgroup" label="science & nature">
+                                            <option value="animals">animals</option>
+                                            <option value="environment">environment</option>
+                                            <option value="physics">physics</option>
+                                            <option value="body & health">body & health</option>
+    
+                                        </optgroup>
+                                        <optgroup class="optgroup" label="history">
+                                            <option value="historic events">historic events</option>
+                                            <option value="people & civilization">people & civilization</option>
+                                        </optgroup> 
+                                    </select>
                                 </div>
-                                <div class="body">
-                                    <p><%- post.body.substring(0, 150)%></p>
+                                <div class="btn">
+                                    <button type="submit">add post</button>
                                 </div>
-                                <div class="readmore">
-                                    <a href="/readmore/<%= post._id%>">readmore</a>
-                                </div>
-                            </div>
-                        <% }) %> 
-                    <% } %> 
+                            </form>
+                        </div>
                 </section>
-            </section>
-        </div>
-    </section>
+                <!-- second section/////////////////////////////////////// -->
+                <section class="manage-post">
+                    <div class="title">
+                        <h1>manage posts</h1>
+                    </div>
+                    <section class="posts">
+                        <% if(posts){%>
+                            <% posts.forEach(post=>{ %>
+                                <div class="images">
+                                    <div class="img">
+                                        <img src="<%= post.image%>" alt="">
+                                    </div>
+                                    <div class="name">
+                                        <p><%= post.name%></p>
+                                    </div>
+                                    <div class="topic">
+                                        <p><%= post.topic%></p>
+                                    </div>
+                                    <div class="body">
+                                        <p><%- post.body.substring(0, 150)%></p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a href="/readmore/<%= post._id%>">readmore</a>
+                                    </div>
+                                </div>
+                            <% }) %> 
+                        <% } %> 
+                    </section>
+                </section>
+            </div>
+        </section>
+    </div>
+
 
 
 

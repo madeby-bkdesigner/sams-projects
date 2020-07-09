@@ -41,6 +41,21 @@ function mainMenu() {
     $(subnavBtn).slideToggle(200)
 }
 
+
+
+// let downArrow = document.querySelectorAll('.down-arrow')
+
+// downArrow.forEach(downArrow=>{
+//     downArrow.addEventListener('click', e=>{
+//         let subcontent = e.target.parentElement.nextSibling.nextSibling
+//         $(subcontent).slideToggle(500)
+//         if(!subcontent){
+//             $(subcontent).slideUp(500)
+//         }
+//     })
+
+// })
+
 // ======================================//
 let slides = 0
 slideShow()
@@ -78,7 +93,7 @@ $(addPostBtn).on('click', e => {
 })
 
 
-let entertainment = $('.test[href*="entertainment"]')
+
 
 
 /////////// ckeditor

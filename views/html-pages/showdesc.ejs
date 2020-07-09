@@ -2,77 +2,110 @@
 <%- include ('../partials/main-nav') %> 
 
     <header class="showdesc-header">
-        <section class="showdesc-sec">
-            <div class="container">
-                <div class="links">
-                    <a href="/<%= topicLink%>"><%= topicLink %> </a> <i class="fas fa-angle-right his"></i><a class="showdesc-link his" href="/<%= topicLink %>/<%= foundPost.topic%>"><%= foundPost.topic%></a>
-                </div>
-                <div class="images">
-                    <div class="post-title">
-                        <h1><%= foundPost.title %> </h1>
+        <div class="main-sec-container">
+            <section class="showdesc-sec">
+                <div class="container">
+                    <div class="links">
+                        <a href="/<%= topicLink%>"><%= topicLink %> </a> <i class="fas fa-angle-right his"></i><a class="showdesc-link his" href="/<%= topicLink %>/<%= foundPost.topic%>"><%= foundPost.topic%></a>
                     </div>
-                    <div class="img">
-                        <img src="<%= foundPost.image%>" alt="">
-                    </div>
-                    <div class="grid">
-                        <div class="topic">
-                            <p><%= foundPost.topic %> </p>
+                    <div class="images">
+                        <div class="post-title">
+                            <h1><%= foundPost.title %> </h1>
                         </div>
-                        <!-- <div class="date">
-                            <p><%= foundPost.date %> </p>
-                        </div> -->
-                    </div>
+                        <div class="img">
+                            <img src="<%= foundPost.image%>" alt="">
+                        </div>
+                        <div class="grid">
+                            <div class="topic">
+                                <p><%= foundPost.topic %> </p>
+                            </div>
+                            <!-- <div class="date">
+                                <p><%= foundPost.date %> </p>
+                            </div> -->
+                        </div>
+                        
+                        <% if(currentuser){ %>
+                            <div class="btns">
+                                <button class="edit-btn"><a href="/edit/<%= foundPost._id%>">edit</a></button>
+
+                                <form action="/readmore/<%= foundPost._id%>?_method=DELETE" method="POST">
+                                    <button type="submit">delete</button>
+                                </form>
+                            </div>
+                        <%} %> 
+
+                        <div class="body">
+                            <p><%- foundPost.body %> </p>
+                        </div>
                     
-                    <% if(currentuser){ %>
-                        <div class="btns">
-                            <button class="edit-btn"><a href="/edit/<%= foundPost._id%>">edit</a></button>
 
-                            <form action="/readmore/<%= foundPost._id%>?_method=DELETE" method="POST">
-                                <button type="submit">delete</button>
-                            </form>
-                        </div>
-                    <%} %> 
-
-                    <div class="body">
-                        <p><%- foundPost.body %> </p>
                     </div>
-                
-
                 </div>
-            </div>
-        </section>
-        <!-- ///////////////// -->
-        
-        <section class="recent-posts">
-            <div class="container">
+            </section>
+            <!-- ///////////////// -->
+            
+            <section class="recent-posts">
+                <div class="container">
+                    <div class="title">
+                        <hr><hr><h1>recent posts </h1><hr><hr>
+                    </div>
+                    <div class="recent-posts-div">
+                        <% if(posts){%>
+                            <% posts.forEach(post=>{ %>
+                                    <div class="images">
+                                        <div class="img">
+                                            <img src="<%= post.image%>" alt="">
+                                        </div>
+                                        <div class="name">
+                                            <p><%= post.name%></p>
+                                        </div>
+                                        <div class="topic">
+                                            <p><%= post.topic%></p>
+                                        </div>
+                                        <div class="body">
+                                            <p><%- post.body.substring(0, 150)%></p>
+                                        </div>
+                                        <div class="readmore">
+                                            <a href="/readmore/<%= post._id%>">readmore</a>
+                                        </div>
+                                    </div>
+                                <% }) %> 
+                            <% } %> 
+                        </div>
+                </div>
+            </section>
+        </div>
+        <aside class="aside">
+            <section class="posts">
                 <div class="title">
-                    <hr><hr><h1>recent posts </h1><hr><hr>
+                    <h1> related </h1><hr><hr>
                 </div>
-                <div class="recent-posts-div">
+                <div class="posts-div">
                     <% if(posts){%>
                         <% posts.forEach(post=>{ %>
-                                <div class="images">
-                                    <div class="img">
-                                        <img src="<%= post.image%>" alt="">
-                                    </div>
-                                    <div class="name">
-                                        <p><%= post.name%></p>
-                                    </div>
-                                    <div class="topic">
-                                        <p><%= post.topic%></p>
-                                    </div>
-                                    <div class="body">
-                                        <p><%- post.body.substring(0, 150)%></p>
-                                    </div>
-                                    <div class="readmore">
-                                        <a href="/readmore/<%= post._id%>">readmore</a>
-                                    </div>
+                            <div class="images">
+                                <div class="img">
+                                    <img src="<%= post.image%>" alt="">
                                 </div>
-                            <% }) %> 
-                        <% } %> 
-                    </div>
-            </div>
-        </section>
+                                <div class="name">
+                                    <p><%= post.name%></p>
+                                </div>
+                                <div class="topic">
+                                    <p><%= post.topic%></p>
+                                </div>
+                                <div class="body">
+                                    <p><%- post.body.substring(0, 100)%></p>
+                                </div>
+                                <div class="readmore">
+                                    <a href="/readmore/<%= post._id%>">readmore</a>
+                                </div>
+                            </div>
+                        <% }) %> 
+                    <% } %> 
+                </div>
+            </section>
+        </aside>
+        
     </header>
 
 
