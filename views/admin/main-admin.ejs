@@ -18,10 +18,15 @@
                                    
                                     <div class="main-content">
                                         <div class="user" >
-                                            <i class="far fa-user-circle"></i><a href="#"><%= currentuser.name %> </a>
+                                            <div class="username">
+                                                <i class="far fa-user-circle"></i><a href="#"><%= currentuser.name %> </a>
+                                            </div>
                                             <div class="logout">
+                                                <a href="/">home</a>
+                                                <br>
                                                 <a href="/logout">logout</a>
                                             </div>
+                                            
                                         </div>
                                             
                                         <div class="subnav">
@@ -61,6 +66,7 @@
                                             <% console.log(currentuser) %> 
                                             <div class="logout">
                                                 <a href="/logout">logout</a>
+                                                <a href="/"><i class="fas fa-house-user"></i>home</a>
                                             </div>
                                         </div>
                                             
@@ -184,7 +190,7 @@
                                         <p><%- post.body.substring(0, 150)%></p>
                                     </div>
                                     <div class="readmore">
-                                        <a href="/readmore/<%= post._id%>">readmore</a>
+                                        <a href="/readmore/<%= post._id%>">read more</a>
                                     </div>
                                 </div>
                             <% }) %> 

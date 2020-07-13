@@ -11,19 +11,28 @@ const { route } = require('./admin');
 
     // home
 router.get('/', (req, res) => {
-    posts.find({}, (err, post) => {
-        if (err) {
+    let idc = {'_id': -1}
+    posts.find().sort(idc).limit(6).exec((err, mainpost)=>{
+        if(err){
             log(err)
-        } else {
-            res.render('./html-pages/home', { posts: post })
+        }else{
+            posts.find().sort({'_id': -1}).limit(3).exec((err, post)=>{
+                if(err){
+                    log(err)
+                }else{
+                    res.render('./html-pages/home', {mainpost: mainpost, posts: post})
+                }
+            })
         }
     })
+    
+    
 })
 
 
 /// show desc
 router.get('/readmore/:id', (req, res) => {
-        posts.find({}, (err, post)=>{
+    posts.find().sort({'_id': -1}).limit(6).exec((err, post)=>{
             if(err){
                 log(err)
             }else{
@@ -157,6 +166,7 @@ route('/history/:id')
     })
 })
 
+// contact
 router.
 route('/contact')
 .get((req, res)=>{

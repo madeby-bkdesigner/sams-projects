@@ -6,6 +6,7 @@ let subnavContent = document.querySelectorAll('.subnav-content')
 let subnavBtn = document.querySelectorAll('.subnav-btn')
 let showSubNav = document.querySelectorAll('.right-arrow i')
 let backArrow = document.querySelectorAll('.back-arrow')
+let transparent = document.querySelectorAll('.transparent')
 
 
 $(burgerMenu).on('click', e => {
@@ -18,9 +19,13 @@ $(burgerMenu).on('click', e => {
 //close
 $(closeMenu).on('click', e => {
     $(navBars).slideUp(150)
-    $(burgerMenu).slideToggle(250)
+    $(burgerMenu).slideToggle(200)
 })
-
+// transparent div close navbars
+$(transparent).on('click', e=>{
+    $(navBars).slideUp(100)
+    $(burgerMenu).slideDown(250)
+})
 
 ///show sun nav
 showSubNav.forEach(arrows=>{

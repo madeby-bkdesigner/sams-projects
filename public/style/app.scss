@@ -16,10 +16,11 @@ body {
         grid-template-rows: auto;
         grid-template-areas: 
         "menu logo";
-        padding: 0px 10px;
+        padding: 5px 10px;
 
         .logo{
           grid-area: logo;
+          margin-left: 20px;
         }
         .nav-bars {
           overflow: hidden;
@@ -152,6 +153,7 @@ body {
                 float: left;
                 overflow: hidden;
                 margin-top: 20px;
+                padding-bottom: 10px;
                 .subnav-btn {
                   
                   padding: 0 15px;
@@ -260,11 +262,11 @@ body {
         grid-template-rows: auto;
         grid-template-areas: 
         "menu logo";
-        padding: 0px 10px;
+        padding: 10px 10px;
 
         .logo{
           grid-area: logo;
-          
+          margin-left: 20px;
         }
         .nav-bars {
           overflow: hidden;
@@ -505,23 +507,23 @@ body {
                     display: block;
                     background-color: rgb(233, 233, 233);
                     padding: 15px;
-                    .logout{
-                      float: none;
-                      text-decoration: underline;
-                      margin-left: 20px;
-                    }
                     a{
                       font-size: 22px;
                       text-transform: capitalize;
                       text-decoration: none;
                       color: rgb(17, 13, 13);
-                      padding:  0 15px;
+                      padding:  10px 15px;
                       cursor: pointer;
                     }
                     i{
                       font-size: 20px;
                       color: rgb(24, 20, 20);
                       cursor: pointer;
+                    }
+                    .logout{
+                      margin-left: 20px;
+                      a{
+                      }
                     }
                   }
               .main-content {
@@ -566,19 +568,17 @@ body {
             overflow: hidden;
             .links {
               display: grid;
-              grid-template-columns: 70% 30%;
-              grid-template-areas: 
-              "main-con trans";
+              grid-template-columns: 100%;
+            
               float: left;
               box-sizing: border-box;
               position: absolute;
               top: 0;
               left: 0;
-              width: 100%;
+              width: 85%;
               height: 100vh;
 
               .transparent {
-                grid-area: trans;
                 background-color: rgba(26, 32, 41, 0.5);
                 border-radius: 3px;
                 .burger-close {
@@ -594,11 +594,6 @@ body {
                     display: block;
                     background-color: rgb(233, 233, 233);
                     padding: 15px;
-                    .logout{
-                      float: none;
-                      text-decoration: underline;
-                      margin-left: 20px;
-                    }
                     a{
                       font-size: 22px;
                       text-transform: capitalize;
@@ -612,13 +607,25 @@ body {
                       color: rgb(24, 20, 20);
                       cursor: pointer;
                     }
+                    .logout{
+                      margin-left: 20px;
+                      a{
+                        padding: 10px 0;
+                        text-decoration: none !important;
+                        color: rgb(0, 89, 255) !important;
+                      }
+                      i{
+                        padding-right: 5px;
+                      }
+                    }
+
+                  
                   }
               .main-content {
-                grid-area: main-con;
                 display: block;
                 z-index: 1;
                 background-color: #141b1b;
-                
+                width: 85%;
                 .subnav {
                   width: 100%;
                   .subnav-btn {
@@ -659,6 +666,7 @@ body {
 }
 // Home
 .home-header {
+  overflow: hidden;
   .container {
     .showcase{ 
       margin-bottom: 20px;
@@ -668,14 +676,19 @@ body {
       grid-template-columns: repeat(1,1fr);
       grid-template-rows: auto;
       grid-gap: 10px;
+      border: 1px solid grey;
+      padding: 15px 0px;
+      border-radius: 7px;
+      width: 95%;
+      margin: auto;
       .images{
         width: 90%;
         margin: auto;
         .img{
           img{
             width: 100%;
-            height: 300px;
-            max-height: 300px;
+            height: 280px;
+            object-fit: cover;
             border-top-left-radius: 7px;
             border-top-right-radius: 7px;
           }
@@ -705,7 +718,8 @@ body {
         }
         .body{
           p{
-          padding: 0 10px;
+            font-size: 20px;
+            padding: 0 10px;
             letter-spacing: 1px;
           }
         }
@@ -758,14 +772,17 @@ body {
         display: grid;
         grid-template-columns: repeat(1,1fr);
         grid-template-rows: auto;
-        grid-gap: 10px;
+        grid-gap: 20px;
         padding: 20px 10px;
         .images{
+          width: 95%;
+          margin: auto;
           .img{
+            height: 250px;
             img{
               width: 100%;
-              height: 300px;
-              max-height: 300px;
+              height: 100%;
+              object-fit: cover;
               border-top-left-radius: 7px;
               border-top-right-radius: 7px;
             }
@@ -1027,8 +1044,6 @@ body {
           .img{
             img{
               width: 100%;
-              height: 220px;
-              max-height: 220px;
               border-radius: 7px;
             }
           }
@@ -1107,10 +1122,10 @@ body {
         }
       }
       .img{
+        height: 350px;
         img{
             width: 100%;
-            height: 300px;
-            max-height: 350px;
+            height: 100%;
             border-radius: 7px;
         }
       }
@@ -1202,14 +1217,15 @@ body {
         display: grid;
         grid-template-columns: repeat(1,1fr);
         grid-template-rows: auto;
-        grid-gap: 10px;
+        grid-gap: 20px;
         padding: 20px 10px;
         .images{
           .img{
+            height: 280px;
             img{
               width: 100%;
-              height: 300px;
-              max-height: 300px;
+              height: 100%;
+              object-fit: cover;
               border-top-left-radius: 7px;
               border-top-right-radius: 7px;
             }
@@ -1319,10 +1335,10 @@ body {
         padding: 20px 10px;
         .images{
           .img{
+            height:320px;
             img{
               width: 100%;
-              height: 300px;
-              max-height: 300px;
+              height: 100%;
               border-top-left-radius: 7px;
               border-top-right-radius: 7px;
             }
@@ -1539,9 +1555,9 @@ body {
         .slide-show{
           .images{
             .img{
+              height: 220px;
               img{
-                height: 220px;
-                max-height: 220px;
+                height: 100%;
               }
             }
           }
@@ -1552,9 +1568,9 @@ body {
           grid-gap: 30px;
           .images{
             .img{
+              height: 200px;
               img{
-                height: 220px;
-                max-height: 220px;
+                height: 100%;
               }
             }
           }
@@ -1566,9 +1582,9 @@ body {
     .showdesc-sec{
       .images{
         .img{
+          height: 230px;
           img{
-            height: 220px;
-            max-height: 220px;
+            height: 100%;
           }
         }
       }
@@ -1579,8 +1595,7 @@ body {
         .images{
           .img{
             img{
-              height: 220px;
-              max-height: 220px;
+
             }
           }
         }
@@ -1593,9 +1608,9 @@ body {
         .posts-div{
           .images{
             .img{
+              height: 240px;
               img{
-                height: 220px;
-                max-height: 220px;
+              
               }
             }
           }
@@ -1666,9 +1681,9 @@ body {
         .slide-show{
           .images{
             .img{
+              height: 350px;
               img{
-                height: 400px ;
-                max-height: 400px;
+                height: 100%;
               }
             }
             .readmore{
@@ -1685,9 +1700,9 @@ body {
         .posts-div{
           .images{
             .img{
+              height: 350px;
               img{
-                height: 400px ;
-                max-height: 400px;
+                height: 100%;
               }
             }
             .readmore{
@@ -1704,8 +1719,7 @@ body {
       .images{
         .img{
           img{
-            height: 100%;
-            max-height: 450px;
+            
           }
         }
         .btns{
@@ -1721,9 +1735,9 @@ body {
         .recent-posts-div{
           .images{
             .img{
+              height: 340px;
               img{
-                height: 400px;
-                max-height: 400px;
+                height: 100%;
               }
             }
             .btns{
@@ -1746,9 +1760,9 @@ body {
         .posts-div{
           .images{
             .img{
+              height: 380px;
               img{
-                height: 400px;
-                max-height: 400px;
+               
               }
             }
             .btns{
@@ -1784,9 +1798,9 @@ body {
           .slide-show{
             .images{
               .img{
+                height: 390px;
                 img{
-                  height: 450px ;
-                  max-height: 450px;
+                  height: 100%;
                 }
               }
               .readmore{
@@ -1803,6 +1817,10 @@ body {
           .posts-div{
             grid-template-columns: repeat(2, 1fr);
             
+            .images{
+              width: 90%;
+              margin: auto;
+            }
           }
         }
       }
@@ -1810,10 +1828,11 @@ body {
     .showdesc-header{
       .showdesc-sec{
           .images{
+            
             .img{
+              height: 430px;
               img{
-                height: 100%;
-                max-height: 450px;
+              
               }
             }
             .btns{
@@ -1843,6 +1862,11 @@ body {
           }
           .posts-div{
             grid-template-columns: repeat(2, 1fr);
+            .images{
+              .img{
+                height: 250px;
+              }
+            }
           }
         }
       }
@@ -1856,8 +1880,7 @@ body {
             .images{
               .img{
                 img{
-                  height: 250px;
-                  max-height: 250px;
+                 
                 }
               }
             }
@@ -1866,6 +1889,7 @@ body {
       }
     }
 }
+
 @media screen and (min-width: 550px){
   .admin-nav-header{
     .nav{
@@ -1878,7 +1902,7 @@ body {
                 grid-template-columns: 60% 40%;
                 .user{
                   .logout{
-                    float: right
+                    // float: right
 
                   }
                 }
@@ -1928,13 +1952,15 @@ body {
     .container{
       .showcase{
         .slide-show{
+          width: 90%;
+          margin: auto;
           .images{
-            width: 85%;
+            width: 90%;
             margin: auto;
             .img{
+              height: 430px;
               img{
-                height: 450px ;
-                max-height: 450px;
+                height: 100%;
               }
             }
             .readmore{
@@ -1952,10 +1978,12 @@ body {
           grid-template-columns: repeat(2, 1fr);
           
           .images{
+            width: 90%;
+            margin: auto;
             .img{
+              height: 300px;
               img{
-                height: 320px ;
-                max-height: 280px;
+               height: 100%;
               }
             }
             .readmore{
@@ -1969,10 +1997,12 @@ body {
   .showdesc-header{
     .showdesc-sec{
         .images{
+          width: 90%;
+          margin: auto;
           .img{
+            height: 530px;
             img{
               height: 100%;
-              max-height: 550px;
             }
           }
           .topic{
@@ -1990,6 +2020,12 @@ body {
         }
        .recent-posts-div{
          grid-template-columns: repeat(2, 1fr);
+         .images{
+           .img{
+             height: 320px;
+             
+           }
+         }
        } 
       }
   }
@@ -2025,8 +2061,7 @@ body {
           .images{
             .img{
               img{
-                height: 220px;
-                max-height: 220px;
+                
               }
             }
           }
@@ -2035,6 +2070,7 @@ body {
     }
   }
 }
+
 @media screen and (min-width: 737px){
   .main-signup{
     .container{
@@ -2113,6 +2149,7 @@ body {
       "main-sec aside";
       .main-sec-container{
         grid-area: main-sec;
+      }
         .showcase{
             .slide-show{
             width: 75%;
@@ -2124,9 +2161,9 @@ body {
               width: 100%;
               margin: auto;
               .img{
+                height: 280px;
                 img{
-                  height: 280px ;
-                  max-height: 280px;
+                  height: 100%;
                 }
               }
               .readmore{
@@ -2145,9 +2182,9 @@ body {
             
             .images{
               .img{
+                height: 200px;
                 img{
-                  height: 250px ;
-                  max-height: 250px;
+                  height: 100%;
                 }
               }
               .readmore{
@@ -2156,7 +2193,7 @@ body {
             }
           }
         }
-      }
+      
       .aside{
         grid-area: aside;
         display: block;
@@ -2194,8 +2231,7 @@ body {
               padding: 10px;
               .img{
                 img{
-                  height: 250px ;
-                  max-height: 250px;
+                
                 }
               }
               .readmore{
@@ -2276,9 +2312,9 @@ body {
           border-radius: 7px;
           padding: 10px 20px;
             .img{
+              height: 620px;
               img{
-                height: 100%;
-                max-height: 500px;
+              
               }
             }
             .topic{
@@ -2300,8 +2336,7 @@ body {
               padding: 0 10px;
               .img{
                 img{
-                  height: 250px;
-                  max-height: 250px;
+                
                 }
               }
             }
@@ -2344,8 +2379,7 @@ body {
                 padding: 10px;
                 .img{
                   img{
-                    height: 250px ;
-                    max-height: 250px;
+                    height: 100%;
                   }
                 }
                 .readmore{
@@ -2380,10 +2414,7 @@ body {
           .images{
             padding: 0 10px;
             .img{
-              img{
-                height: 250px;
-                max-height: 250px;
-              }
+             height: 180px;
             }
             .readmore{
               &:hover{
@@ -2490,8 +2521,7 @@ body {
             .images{
               .img{
                 img{
-                  height: 220px;
-                  max-height: 220px;
+                 
                 }
               }
             }
@@ -2503,10 +2533,10 @@ body {
 }
                     /// larger desktop screen
 
-@media all and (min-width: 1280px){
+@media all and (min-width: 1080px){
   .home-header{
     .container{ 
-      width: 85%;
+      width: 75%;
       margin: auto;
       .main-sec{
         .showcase{
@@ -2515,9 +2545,9 @@ body {
               margin: auto;
             .images{
               .img{
+                height: 400px;
                 img{
-                  height: 450px;
-                  max-height: 450px;
+                  height: 100%;
                 }
               }
             }
@@ -2530,12 +2560,12 @@ body {
           }
           .posts-div{
             grid-template-columns: repeat(3, 1fr);
-            
             .images{
+           
               .img{
+                height: 180px;
                 img{
-                  height: 250px ;
-                  max-height: 250px;
+                  height: 100%;
                 }
               }
               .readmore{
@@ -2546,27 +2576,28 @@ body {
         }
       }
       .aside{
-        max-width: 70%;
         .posts{
           .title{
-            width: 50%;
-            margin: 0;
-            padding: 0 0 5px 0;
+            width: 40% !important;
+            margin: 0 0 10px 50px;
+            padding: 0 0px 5px 0;
+            text-align: center;
             hr{
-              width: 80%;
+              width:70%;
               margin:3px auto auto auto;
             }
           }
           .posts-div{
             margin: 10px 10px 0 0;
             padding: 10px;
+            width: 75%;
             .images{
               width: 65%;
               margin: 0;
               .img{
+                height: 200px;
                 img{
-                  height: 180px;
-                  max-height: 180px;
+                  height: 100%;
                 }
               }
             }
@@ -2583,6 +2614,7 @@ body {
                 text-align: left;
   
               }
+              input{}
             }
           }
         }
@@ -2590,18 +2622,21 @@ body {
     }
   }
   .showdesc-header{
+    width: 85%;
+    margin: auto;
     display: grid;
     grid-template-columns: 30% 70%;
     grid-template-rows: auto;
     grid-template-areas: 
     "aside main-sec";
     .main-sec-container{
-      width: 80%;
+      width: 85%;
       margin: 0;
       .showdesc-sec{
         grid-area: main-sec;
         .container{
         width: 100%;
+        margin: 0;
         }
         .links{
         }
@@ -2610,9 +2645,9 @@ body {
           border-radius: 7px;
           padding: 10px 20px;
             .img{
+              height: 490px;
               img{
-                height: 100%;
-                max-height: 500px;
+          
               }
             }
             .topic{
@@ -2633,9 +2668,9 @@ body {
             .images{
               padding: 0 10px;
               .img{
+                height: 180px;
                 img{
-                  height: 180px;
-                  max-height: 180px;
+                  height: 100%;
                 }
               }
             }
@@ -2645,21 +2680,20 @@ body {
     .aside{
       display: block;
       grid-area: aside;
-      max-width: 75%;
+      max-width: 80%;
       padding: 20px 30px;
       .posts{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        grid-template-rows: auto;
-        grid-gap: 10px;
-        padding: 20px 10px;
         .posts-div{
+          display: grid;
+          grid-template-columns: repeat(1,1fr);
+          grid-template-rows: auto;
+          grid-gap: 20px;
+          padding: 20px 10px;
           .images{
             .img{
+              height: 150px;
               img{
                 width: 100%;
-                height: 180px;
-                max-height: 180px;
                 border-radius: 7px;
               }
             }
@@ -2687,7 +2721,7 @@ body {
               }
             }
             .readmore{
-              background-color: rgb(245, 46, 46);
+              background-color: green;
               text-align: center;
               padding: 5px 0;
               border-radius: 7px;
@@ -2721,17 +2755,14 @@ body {
           }
         }
         .posts-div{
-          width: 95%;
+          width: 85%;
           margin: auto;
           grid-template-columns: repeat(3, 1fr);
           grid-gap: 20px;
           .images{
             padding: 0 10px;
             .img{
-              img{
-                height: 250px;
-                max-height: 250px;
-              }
+              height: 200px;
             }
             .readmore{
               &:hover{
@@ -2816,7 +2847,6 @@ body {
                     background-color: rgb(233, 233, 233);
                     padding: 15px;
                     .logout{
-                      float: right;
                       text-decoration: underline;
                     }
                     a{
@@ -2857,8 +2887,7 @@ body {
             .images{
               .img{
                 img{
-                  height: 220px;
-                  max-height: 220px;
+                 
                 }
               }
             }
