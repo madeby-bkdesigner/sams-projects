@@ -1,6 +1,9 @@
-body {
+*{
   margin: 0;
   padding: 0;
+}
+body {
+  margin: 0;
   overflow-x: hidden;
 }
 
@@ -20,7 +23,7 @@ body {
 
         .logo{
           grid-area: logo;
-          margin-left: 20px;
+          margin-right: 20px;
         }
         .nav-bars {
           overflow: hidden;
@@ -258,15 +261,18 @@ body {
     .container {
       .main-nav{
         display: grid;
-        grid-template-columns: 80% 20%;
+        grid-template-columns: 70% 30%;
         grid-template-rows: auto;
         grid-template-areas: 
         "menu logo";
-        padding: 10px 10px;
+        padding: 5px 7px;
 
         .logo{
           grid-area: logo;
-          margin-left: 20px;
+          margin-right: 10px;
+          display: flex;
+          justify-content: flex-end;
+          align-items: flex-end;
         }
         .nav-bars {
           overflow: hidden;
@@ -981,6 +987,7 @@ body {
     .add-post, .edit-post{
       background-color: rgb(219, 216, 216);
       border-radius: 12px;
+      margin-bottom: 40px;
       .fields{
         border: 1px solid grey;
         border-radius: 12px;
@@ -991,6 +998,7 @@ body {
           text-transform: capitalize;
         }
         form{
+          margin-bottom: 30px;
           .content{
             display: block;
             label{
@@ -1047,6 +1055,7 @@ body {
       }
     }
     .manage-post{
+      margin-bottom: 40px;
       .title{
         h1{
           text-align: center;
@@ -1111,6 +1120,7 @@ body {
       }
     }
     .manage-user-section{
+      margin-bottom: 40pxs;
       .add-user-btn{
         a{
           text-decoration: none;
@@ -1548,6 +1558,7 @@ body {
             font-family: Georgia, 'Times New Roman', Times, serif;
             font-weight: bold;
             letter-spacing: 1px;
+            text-decoration: underline;
           }
         }
         .sub-nav {
@@ -1591,10 +1602,12 @@ body {
       .nav{
         .container{
           .main-nav{
+            .logo{
+            }
             .nav-bars{
               .small-sc-bar{
                 .links{
-                  grid-template-columns: 80% 20%;
+                  grid-template-columns: 70% 30%;
                 }
               }
             }
@@ -2013,6 +2026,11 @@ body {
     .nav{
       .container{
         .main-nav{
+          .logo{
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+          }
           .nav-bars{
             .small-sc-bar{
               .links{
@@ -2185,6 +2203,10 @@ body {
           
           .logo{
             grid-area: logo;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-left:20px ;
           }
           .nav-bars{
             text-align: right;

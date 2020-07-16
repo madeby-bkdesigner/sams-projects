@@ -29,7 +29,7 @@ router.post('/', (req, res) => {
         if (err) {
             log(err)
         } else {
-            res.redirect('/admin')
+            res.redirect('/admin/managepost')
         }
     })
 

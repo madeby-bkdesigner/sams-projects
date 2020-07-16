@@ -78,12 +78,12 @@ app.use(userRoute)
 
     // redirecting wrong urls
 app.get('*', (req, res) => {
-    res.send('oops you came to the wrong page');
+    res.render('404');
 })
 
     // set the port
 
-let port = process.env.PORT || 3000;
+let port = process.env.PORT || 3001;
 let host = '0.0.0.0'
 app.listen(port,host, () => {
     log('server started on ' + port)
