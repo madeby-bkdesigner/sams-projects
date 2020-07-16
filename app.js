@@ -20,12 +20,16 @@ let posts = require('./models/posts');
 let user = require('./models/user')
 
     // Conntect to database
-mongoose.connect('mongodb://localhost/sams', {
+mongoose.connect(process.env.databaseUrl, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
     useCreateIndex:true,
 
+}).then(()=>{
+    log('Connected to the db')
+}).catch(err=>{
+    log('ERROR: ', err.message)
 })
 
 
@@ -79,9 +83,9 @@ app.get('*', (req, res) => {
 
     // set the port
 
-let port = 3000;
-
-app.listen(port, () => {
+let port = process.env.PORT || 3000;
+let host = '0.0.0.0'
+app.listen(port,host, () => {
     log('server started on ' + port)
 })
 
