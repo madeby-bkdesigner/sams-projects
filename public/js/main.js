@@ -79,13 +79,23 @@ function slideShow() {
 }
 
 /////////////////// Admin /////////////////////////////
+
+// // btns
+let manageUserBtn = $('.manage-user-btn')
+
+// section manage post btns
 let addPostBtn = $('.add-post-btn')
 let managePostBtn = $('.manage-post-btn')
+
+// sections
 let addPost = $('.add-post')
 let managePost = $('.manage-post')
+let manageUser = $('.manage-user-section')
 
+//addpost section display none
 $(addPost).css('display', 'none')
 
+// section togle
 $(managePostBtn).on('click', e => {
     $(addPost).slideUp(1000)
     $(managePost).slideDown(1000)
@@ -96,9 +106,6 @@ $(addPostBtn).on('click', e => {
     $(addPost).slideDown(1000)
     
 })
-
-
-
 
 
 /////////// ckeditor

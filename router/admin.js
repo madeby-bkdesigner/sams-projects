@@ -3,18 +3,20 @@ let express = require('express'),
     router = express.Router()
 
 let posts = require('../models/posts');
-let middleware = require('../middleware/index')
+let user = require('../models/user')
+let middleware = require('../middleware/index');
+const { rejectSeries } = require('async');
 
-router.get('/admin', middleware.isLoggedIn, (req, res) => {
+router.get('/admin/managepost', middleware.isLoggedIn, (req, res) => {
     posts.find({}, (err, posts) => {
         if (err) {
             log(err)
         } else {
-            res.render('./admin/main-admin', {posts: posts})
+            res.render('./admin/managepost', {posts: posts})
         }
     })
 })
-
+                                                /// add post manage post section
 router.post('/', (req, res) => {
     let title = req.body.title
     let image = req.body.image
@@ -62,6 +64,46 @@ router.delete('/readmore/:id', (req, res)=>{
             log(err)
         }else{
             res.redirect('/')
+        }
+    })
+})
+
+//manage user
+router.
+route('/admin/manageuser')
+.get(middleware.isLoggedIn,(req, res)=>{
+    user.find({}, (err, user)=>{
+        if(err){
+            log(err)
+        }else{
+            res.render('./admin/manageuser', {user:user})
+        }
+    })
+})
+
+
+// user data
+router.
+route('/admin/userdata/:id')
+.get(middleware.isLoggedIn, (req, res)=>{
+    user.findById(req.params.id, (err, user)=>{
+        if(err){
+            log(err)
+        }else{
+            res.render('./admin/userdata', {user:user})
+        }
+    })
+})
+
+router.
+route('/admin/userdata/:id')
+.put((req, res)=>{
+    user.findByIdAndUpdate(req.params.id, req.body, (err, updateduser)=>{
+        if(err){
+            log(err)
+        }else{
+            log(updateduser)
+            res.redirect('/admin/manageuser')
         }
     })
 })

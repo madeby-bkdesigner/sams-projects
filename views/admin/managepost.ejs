@@ -1,0 +1,94 @@
+<%- include ('../partials/header') %> 
+<%- include ('../partials/main-admin-nav') %> 
+    <div class="split-aside">
+        <div class="main-admin">
+            <div class="container">
+                <div class="manage-post-section">
+                    <div class="main-btn">
+                        <button class="add-post-btn">add post</button>
+                        <button class="manage-post-btn">manage post</button>
+                    </div>
+                    <section class="add-post">
+                            <div class="fields">
+                                <h1>create a post</h1>
+                                <form action="/" method="POST">
+                                    <div class="content">
+                                        <label for="title">title</label>
+                                        <input type="text" name="title" required>
+                                    </div>
+                                    <div class="content">
+                                        <label for="image">image</label>
+                                        <input type="text" name="image" required>
+                                    </div>
+                                    <div class="body-input">
+                                        <p>body</p>
+                                        <textarea name="body" id="body"></textarea>
+                                    </div>
+                                    <div class="topic">
+                                        <select name="topic" id="topic" required>
+                                            <option value="">none</option>
+                                            <optgroup class="optgroup" label="entertainment">
+                                                <option value="funfacts">funfacts</option>
+                                                <option value="movies & shows">movies and shows</option>
+                                                <option value="technology">technology</option>
+                                                <option value="sports & games">sports & games</option>
+                                            </optgroup>                                   
+                                            <optgroup class="optgroup" label="science & nature">
+                                                <option value="animals">animals</option>
+                                                <option value="environment">environment</option>
+                                                <option value="physics">physics</option>
+                                                <option value="body & health">body & health</option>
+    
+                                            </optgroup>
+                                            <optgroup class="optgroup" label="history">
+                                                <option value="historic events">historic events</option>
+                                                <option value="people & civilization">people & civilization</option>
+                                            </optgroup> 
+                                        </select>
+                                    </div>
+                                    <div class="btn">
+                                        <button type="submit">add post</button>
+                                    </div>
+                                </form>
+                            </div>
+                    </section>
+                    <!-- second section/////////////////////////////////////// -->
+                    <section class="manage-post">
+                        <div class="title">
+                            <h1>manage posts</h1>
+                        </div>
+                        <section class="posts">
+                            <% if(posts){%>
+                                <% posts.forEach(post=>{ %>
+                                    <div class="images">
+                                        <div class="img">
+                                            <img src="<%= post.image%>" alt="">
+                                        </div>
+                                        <div class="name">
+                                            <p><%= post.name%></p>
+                                        </div>
+                                        <div class="topic">
+                                            <p><%= post.topic%></p>
+                                        </div>
+                                        <div class="body">
+                                            <p><%- post.body.substring(0, 150)%></p>
+                                        </div>
+                                        <div class="readmore">
+                                            <a href="/readmore/<%= post._id%>">read more</a>
+                                        </div>
+                                    </div>
+                                <% }) %> 
+                            <% } %> 
+                        </section>
+                    </section>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+        <script src="https://cdn.ckeditor.com/ckeditor5/20.0.0/classic/ckeditor.js"></script>
+        <script src="/public/js/main.js"></script>
+    </body>
+</html>

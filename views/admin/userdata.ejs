@@ -6,36 +6,28 @@
         <div class="container">
             <section class="main-sec">
                 <div class="form">
-                    <form action="/signup" method="POST">
+                    <form action="/admin/userdata/<%= user._id %>?_method=PUT" method="POST">
                         <div class="content">
                             <label for="name">full name</label>
-                            <input type="text" name="name" required>
+                            <input type="text" name="name" value="<%= currentuser.name%>" readonly>
                         </div>
                         <div class="content">
                             <label for="email">email</label>
-                            <input type="email" name="email" required>
+                            <input type="email" name="email" value="<%= currentuser.email %> " required>
                         </div>
                         <div class="content">
                             <label for="username">username</label>
-                            <input type="text" name="username" required>
+                            <input type="text" name="username" value="<%= currentuser.username %>" readonly>
                         </div>
-                        <div class="content">
-                            <label for="password">password</label>
-                            <input type="password" name="password" required>
-                        </div>
-                        <!-- <div class="content">
-                            <label for="passwordConfirm">passwor confirmation</label>
-                            <input type="password" name="passwordConfirm" required>
-                        </div> -->
+
                         <div class="content">
                             <label for="role" >role</label>
                             <select name="role" id="role" required>
-                                <option value="Admin">admin</option>
-                                <option value="Author">author</option>
+                                <option value="Admin"><%= currentuser.role %> </option>
                             </select>
                         </div>
                         <div class="btn">
-                            <button type="submit">signup</button>
+                            <button type="submit">edit</button>
                         </div>
                     </form>
                 </div>

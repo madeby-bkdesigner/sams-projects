@@ -446,8 +446,8 @@ body {
 }
 //admin-nav
 .admin-nav-header {
-
   .nav {
+
     background:#0099ff;
     
     .container {
@@ -511,8 +511,8 @@ body {
                       font-size: 22px;
                       text-transform: capitalize;
                       text-decoration: none;
-                      color: rgb(17, 13, 13);
-                      padding:  10px 15px;
+                      color: rgb(13, 14, 17);
+                      padding:  5px 15px;
                       cursor: pointer;
                     }
                     i{
@@ -523,6 +523,9 @@ body {
                     .logout{
                       margin-left: 20px;
                       a{
+                        display: block;
+                        color:  rgb(11, 11, 145);
+                        padding: 5px 10px;
                       }
                     }
                   }
@@ -549,6 +552,10 @@ body {
                       border: 1px solid #262b2b;
                       padding:5px 0px 5px 5px;
 
+                      a{
+                        text-decoration: none;
+                        color: #efefef;
+                      }
                       i{
                         color: #bebebe;
                       }
@@ -569,14 +576,15 @@ body {
             .links {
               display: grid;
               grid-template-columns: 100%;
-            
+              
               float: left;
               box-sizing: border-box;
-              position: absolute;
+              position: fixed;
               top: 0;
               left: 0;
               width: 85%;
               height: 100vh;
+              
 
               .transparent {
                 background-color: rgba(26, 32, 41, 0.5);
@@ -623,7 +631,6 @@ body {
                   }
               .main-content {
                 display: block;
-                z-index: 1;
                 background-color: #141b1b;
                 width: 85%;
                 .subnav {
@@ -642,6 +649,7 @@ body {
                       color: #efefef;
                       border: 1px solid #262b2b;
                       padding:5px 0px 5px 5px;
+                      cursor: pointer;
 
                       i{
                         color: #bebebe;
@@ -650,7 +658,13 @@ body {
                         border: 1px solid rgba(218, 190, 190, 0.6);
                         padding: 5px 0 5px 15px;
                     }
+                  }
+                  .user-data{
+                    a{
+                      text-decoration: none;
+                      color: #efefef;
                     }
+                  }
                   }
 
                 }
@@ -668,6 +682,7 @@ body {
 .home-header {
   overflow: hidden;
   .container {
+    
     .showcase{ 
       margin-bottom: 20px;
       padding: 10px 0;
@@ -853,20 +868,22 @@ body {
           bottom: 70px;
           .form{
                 background-color: rgb(248, 248, 248);
-                padding: 10px;
+                padding: 20px 10px;
                 border-radius: 7px;
                 form{
                     .content{
-                        display: grid;
-                        grid-template-columns: repeat(1, 1fr);
-                        grid-row-gap: 10px;
-                        margin: 0px 0 15px 0;
+                      width: 95%;
+                      margin: auto auto 15px auto !important;
+                      display: grid;
+                      grid-template-columns: repeat(1, 1fr);
+                      grid-row-gap: 10px;
                         label{
                             color: #000;
                             font-size: 22px;
                             text-transform: capitalize;
                         }
                         input{
+                          width: 100% !important; 
                             padding: 10px;
                             border-radius: 5px;
                             font-size: 20px;
@@ -891,19 +908,24 @@ body {
                         width: 95%;
                         margin: auto;
                         button{
-                            padding: 10px;
-                            border: none;
-                            background-color: #4f58da;
-                            font-size: 27px;
-                            border-radius: 7px;
-                            text-transform: capitalize;
-                            color: #fff;
-                            cursor: pointer;
+                          width: 100%;
+                          padding: 10px;
+                          border: none;
+                          background-color: #4f58da;
+                          font-size: 27px;
+                          border-radius: 7px;
+                          text-transform: capitalize;
+                          color: #fff;
+                          cursor: pointer;
 
                             &:hover{
                                 background-color: #829494;
                             }
                         }
+                    }
+                    .forgot{
+                      width: 95%;
+                      margin: auto;
                     }
                     .textarea{
                       textarea{
@@ -1042,8 +1064,10 @@ body {
         .images{
           
           .img{
+            height: 230px;
             img{
               width: 100%;
+              height: 100%;
               border-radius: 7px;
             }
           }
@@ -1081,6 +1105,58 @@ body {
               text-transform: capitalize;
               text-decoration: none;
               cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    .manage-user-section{
+      .add-user-btn{
+        a{
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+      .manage-user{
+        .container{
+          
+          .user{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: auto;
+            border-bottom: 3px solid #000;
+            margin: 50px 0;
+            .data{
+              border-bottom: 1px solid #000;
+              margin-bottom: 20px;
+            }  
+            h1{
+              text-transform: capitalize;
+              margin: 0;
+              padding: 7px 0;
+            }
+            p{
+              font-size: 20px;
+              margin: 0;
+              padding: 7px 0px 7px 7px;
+              
+            }
+       
+            .del-btn{
+              form{
+                button{
+                    color: #fff;
+                    background-color: red;
+                    font-size: 26px;
+                    text-decoration: none;
+                    border: none;
+                    border-radius: 7px;
+                    text-transform: capitalize;
+                    padding:7px 0;
+                    width: 100%;
+                    cursor: pointer;
+                }
+              }
             }
           }
         }
@@ -2067,6 +2143,7 @@ body {
           }
         }
       }
+      
     }
   }
 }
@@ -2480,7 +2557,6 @@ body {
                     background-color: rgb(233, 233, 233);
                     padding: 15px;
                     .logout{
-                      float: right;
                       text-decoration: underline;
                     }
                     a{
@@ -2522,6 +2598,72 @@ body {
               .img{
                 img{
                  
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .main-admin{
+    .container{
+      width: 85%;
+      margin: auto;
+      .manage-user{
+        .container{
+          .user{
+            border-bottom: 3px solid #000;
+            margin: 50px 0;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: auto;
+           
+            .data{
+              border-bottom: 1px solid #000;
+              margin-bottom: 20px;
+            }  
+            h1{
+              text-transform: capitalize;
+              margin: 0;
+              padding: 7px 0;
+            }
+            p{
+              font-size: 20px;
+              margin: 0;
+              padding: 7px 0px 7px 7px;
+            }
+            .edit-btn{
+              button{
+                background-color: orange;
+                border: none;
+                border-radius: 7px;
+                width: 100%;
+                padding: 7px 0;
+                a{
+                  font-size: 26px;
+                  color: #fff;
+                  text-decoration: none;
+                  text-transform: capitalize;
+                  cursor: pointer;
+                }
+
+              }
+            }
+            .del-btn{
+              margin-top: 10px;
+              form{
+                button{
+                    color: #fff;
+                    background-color: red;
+                    font-size: 26px;
+                    text-decoration: none;
+                    border: none;
+                    border-radius: 7px;
+                    text-transform: capitalize;
+                    padding:7px 0;
+                    width: 100%;
+                    cursor: pointer;
                 }
               }
             }
@@ -2843,19 +2985,30 @@ body {
                    display: none;
                  }
                   .user{
-                    display: block;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: auto;
+                    grid-template-areas: 
+                    "username logout";
                     background-color: rgb(233, 233, 233);
-                    padding: 15px;
-                    .logout{
-                      text-decoration: underline;
+                    padding: 10px;
+                    .username{
+                      grid-area: username;
                     }
                     a{
-                      font-size: 22px;
-                      text-transform: capitalize;
-                      text-decoration: none;
-                      color: rgb(17, 13, 13);
-                      padding:  0 15px;
-                      cursor: pointer;
+                      padding: 0 5px;
+                    }
+                    .logout{
+                      grid-area: logout;
+                      text-decoration: underline;
+                      a{
+                        font-size: 22px;
+                        text-transform: capitalize;
+                        text-decoration: none;
+                        color: rgb(17, 13, 13);
+                        padding:  0 5px;
+                        cursor: pointer;
+                      }
                     }
                     i{
                       font-size: 20px;

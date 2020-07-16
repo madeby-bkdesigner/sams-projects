@@ -1,0 +1,55 @@
+<%- include ('../partials/header') %> 
+<%- include ('../partials/main-admin-nav') %> 
+    <div class="split-aside">
+        <div class="main-admin">
+            <div class="container">
+                <div class="manage-user-section">
+                    <div class="main-btn">
+                        <button class="add-user-btn"><a href="/signup" >add user</a></button>
+                        <button class="manage-user-btn">manage user</button>
+                    </div>
+                    <section class="manage-user">
+                        <div class="container">
+                            <% user.forEach(user =>{ %>
+                                <div class="user">
+                                    <div class=" data name">
+                                        <h1>name</h1>
+                                        <p><%= user.name %> </p>
+                                    </div>
+                                    <div class="data email">
+                                        <h1>email</h1>
+                                        <p><%= user.email %> </p>
+                                    </div>
+                                    <div class="data username">
+                                        <h1>username</h1>
+                                        <p><%= user.username %> </p>
+                                    </div>
+                                    <div class="data role">
+                                        <h1>role</h1>
+                                        <p><%= user.role %> </p>
+                                    </div>
+
+                                    <% if(currentuser.role == 'Admin'){ %>
+                                        <div class="data btns">
+                                            <h1>action</h1>
+                                            <div class=" del-btn">
+                                                <form action="/<%= user._id%>?_method=DELETE" method="POST">
+                                                    <button type="submit">delete</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    <% } %> 
+                                </div>
+                            <% }) %> 
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+        <script src="https://cdn.ckeditor.com/ckeditor5/20.0.0/classic/ckeditor.js"></script>
+        <script src="/public/js/main.js"></script>
+    </body>
+</html>

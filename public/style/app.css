@@ -605,8 +605,8 @@ body {
   font-size: 22px;
   text-transform: capitalize;
   text-decoration: none;
-  color: #110d0d;
-  padding: 10px 15px;
+  color: #0d0e11;
+  padding: 5px 15px;
   cursor: pointer;
 }
 
@@ -618,6 +618,12 @@ body {
 
 .admin-nav-header .nav .container .main-nav .nav-bars .small-sc-bar .links .user .logout {
   margin-left: 20px;
+}
+
+.admin-nav-header .nav .container .main-nav .nav-bars .small-sc-bar .links .user .logout a {
+  display: block;
+  color: #0b0b91;
+  padding: 5px 10px;
 }
 
 .admin-nav-header .nav .container .main-nav .nav-bars .small-sc-bar .links .main-content {
@@ -651,6 +657,11 @@ body {
   padding: 5px 0px 5px 5px;
 }
 
+.admin-nav-header .nav .container .main-nav .nav-bars .small-sc-bar .links .main-content .subnav .subnav-btn button a {
+  text-decoration: none;
+  color: #efefef;
+}
+
 .admin-nav-header .nav .container .main-nav .nav-bars .small-sc-bar .links .main-content .subnav .subnav-btn button i {
   color: #bebebe;
 }
@@ -673,7 +684,7 @@ body {
   float: left;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 85%;
@@ -730,7 +741,6 @@ body {
 
 .admin-nav-header .nav .container .main-nav .nav-bars .big-sc-bar .links .main-content {
   display: block;
-  z-index: 1;
   background-color: #141b1b;
   width: 85%;
 }
@@ -755,6 +765,7 @@ body {
   color: #efefef;
   border: 1px solid #262b2b;
   padding: 5px 0px 5px 5px;
+  cursor: pointer;
 }
 
 .admin-nav-header .nav .container .main-nav .nav-bars .big-sc-bar .links .main-content .subnav .subnav-btn button i {
@@ -764,6 +775,11 @@ body {
 .admin-nav-header .nav .container .main-nav .nav-bars .big-sc-bar .links .main-content .subnav .subnav-btn button:hover {
   border: 1px solid rgba(218, 190, 190, 0.6);
   padding: 5px 0 5px 15px;
+}
+
+.admin-nav-header .nav .container .main-nav .nav-bars .big-sc-bar .links .main-content .subnav .subnav-btn .user-data a {
+  text-decoration: none;
+  color: #efefef;
 }
 
 .home-header {
@@ -984,17 +1000,18 @@ body {
 
 .main-signup .container .main-sec .form, .main-contact .container .main-sec .form {
   background-color: #f8f8f8;
-  padding: 10px;
+  padding: 20px 10px;
   border-radius: 7px;
 }
 
 .main-signup .container .main-sec .form form .content, .main-contact .container .main-sec .form form .content {
+  width: 95%;
+  margin: auto auto 15px auto !important;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[1];
       grid-template-columns: repeat(1, 1fr);
   grid-row-gap: 10px;
-  margin: 0px 0 15px 0;
 }
 
 .main-signup .container .main-sec .form form .content label, .main-contact .container .main-sec .form form .content label {
@@ -1004,6 +1021,7 @@ body {
 }
 
 .main-signup .container .main-sec .form form .content input, .main-contact .container .main-sec .form form .content input {
+  width: 100% !important;
   padding: 10px;
   border-radius: 5px;
   font-size: 20px;
@@ -1029,6 +1047,7 @@ body {
 }
 
 .main-signup .container .main-sec .form form .btn button, .main-contact .container .main-sec .form form .btn button {
+  width: 100%;
   padding: 10px;
   border: none;
   background-color: #4f58da;
@@ -1041,6 +1060,11 @@ body {
 
 .main-signup .container .main-sec .form form .btn button:hover, .main-contact .container .main-sec .form form .btn button:hover {
   background-color: #829494;
+}
+
+.main-signup .container .main-sec .form form .forgot, .main-contact .container .main-sec .form form .forgot {
+  width: 95%;
+  margin: auto;
 }
 
 .main-signup .container .main-sec .form form .textarea textarea, .main-contact .container .main-sec .form form .textarea textarea {
@@ -1187,8 +1211,13 @@ body {
   padding: 20px 10px;
 }
 
+.main-admin .container .manage-post .posts .images .img {
+  height: 230px;
+}
+
 .main-admin .container .manage-post .posts .images .img img {
   width: 100%;
+  height: 100%;
   border-radius: 7px;
 }
 
@@ -1226,6 +1255,52 @@ body {
   color: #fff;
   text-transform: capitalize;
   text-decoration: none;
+  cursor: pointer;
+}
+
+.main-admin .container .manage-user-section .add-user-btn a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.main-admin .container .manage-user-section .manage-user .container .user {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  border-bottom: 3px solid #000;
+  margin: 50px 0;
+}
+
+.main-admin .container .manage-user-section .manage-user .container .user .data {
+  border-bottom: 1px solid #000;
+  margin-bottom: 20px;
+}
+
+.main-admin .container .manage-user-section .manage-user .container .user h1 {
+  text-transform: capitalize;
+  margin: 0;
+  padding: 7px 0;
+}
+
+.main-admin .container .manage-user-section .manage-user .container .user p {
+  font-size: 20px;
+  margin: 0;
+  padding: 7px 0px 7px 7px;
+}
+
+.main-admin .container .manage-user-section .manage-user .container .user .del-btn form button {
+  color: #fff;
+  background-color: red;
+  font-size: 26px;
+  text-decoration: none;
+  border: none;
+  border-radius: 7px;
+  text-transform: capitalize;
+  padding: 7px 0;
+  width: 100%;
   cursor: pointer;
 }
 
@@ -2296,7 +2371,6 @@ body {
     padding: 15px;
   }
   .split-aside .admin-nav-header .nav .container .main-nav .nav-bars .big-sc-bar .links .user .logout {
-    float: right;
     text-decoration: underline;
   }
   .split-aside .admin-nav-header .nav .container .main-nav .nav-bars .big-sc-bar .links .user a {
@@ -2330,6 +2404,63 @@ body {
         grid-template-columns: repeat(2, 1fr);
     -ms-grid-rows: auto;
         grid-template-rows: auto;
+  }
+  .main-admin .container {
+    width: 85%;
+    margin: auto;
+  }
+  .main-admin .container .manage-user .container .user {
+    border-bottom: 3px solid #000;
+    margin: 50px 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+  }
+  .main-admin .container .manage-user .container .user .data {
+    border-bottom: 1px solid #000;
+    margin-bottom: 20px;
+  }
+  .main-admin .container .manage-user .container .user h1 {
+    text-transform: capitalize;
+    margin: 0;
+    padding: 7px 0;
+  }
+  .main-admin .container .manage-user .container .user p {
+    font-size: 20px;
+    margin: 0;
+    padding: 7px 0px 7px 7px;
+  }
+  .main-admin .container .manage-user .container .user .edit-btn button {
+    background-color: orange;
+    border: none;
+    border-radius: 7px;
+    width: 100%;
+    padding: 7px 0;
+  }
+  .main-admin .container .manage-user .container .user .edit-btn button a {
+    font-size: 26px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+    cursor: pointer;
+  }
+  .main-admin .container .manage-user .container .user .del-btn {
+    margin-top: 10px;
+  }
+  .main-admin .container .manage-user .container .user .del-btn form button {
+    color: #fff;
+    background-color: red;
+    font-size: 26px;
+    text-decoration: none;
+    border: none;
+    border-radius: 7px;
+    text-transform: capitalize;
+    padding: 7px 0;
+    width: 100%;
+    cursor: pointer;
   }
 }
 
@@ -2595,19 +2726,36 @@ body {
     display: none;
   }
   .split-aside .admin-nav-header .nav .container .main-nav .nav-bars .big-sc-bar .links .user {
-    display: block;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "username logout";
     background-color: #e9e9e9;
-    padding: 15px;
+    padding: 10px;
   }
-  .split-aside .admin-nav-header .nav .container .main-nav .nav-bars .big-sc-bar .links .user .logout {
-    text-decoration: underline;
+  .split-aside .admin-nav-header .nav .container .main-nav .nav-bars .big-sc-bar .links .user .username {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: username;
   }
   .split-aside .admin-nav-header .nav .container .main-nav .nav-bars .big-sc-bar .links .user a {
+    padding: 0 5px;
+  }
+  .split-aside .admin-nav-header .nav .container .main-nav .nav-bars .big-sc-bar .links .user .logout {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: logout;
+    text-decoration: underline;
+  }
+  .split-aside .admin-nav-header .nav .container .main-nav .nav-bars .big-sc-bar .links .user .logout a {
     font-size: 22px;
     text-transform: capitalize;
     text-decoration: none;
     color: #110d0d;
-    padding: 0 15px;
+    padding: 0 5px;
     cursor: pointer;
   }
   .split-aside .admin-nav-header .nav .container .main-nav .nav-bars .big-sc-bar .links .user i {

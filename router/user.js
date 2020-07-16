@@ -30,7 +30,7 @@ router.post('/signup', (req, res) => {
             passport.authenticate('local')(req, res, () => {
                 log(newuser)
                 req.flash('success', 'welcome ' + req.body.username)
-                res.redirect('/')
+                res.redirect('/admin/managepost')
             })
     })
 })
@@ -41,7 +41,7 @@ router.get('/login', (req, res) => {
 })
 
 router.post('/login', passport.authenticate('local', {
-    successRedirect: '/admin', 
+    successRedirect: '/admin/managepost', 
     failureRedirect: '/login',
     failureFlash: 'invalid username or password'
 }), (req, res) => {
@@ -54,5 +54,21 @@ router.get('/logout', (req, res) => {
     req.flash('success', 'successfully logged out')
     res.redirect('/')
 })
+
+// delete
+
+router.
+route('/:id')
+.delete((req, res)=>{
+    user.findByIdAndDelete(req.params.id, (err, removeuser)=>{
+        if(err){
+            log(err)
+        }else{
+            log(req.user)
+            res.redirect('/admin/managepost')
+        }
+    })
+})
+
 
 module.exports = router

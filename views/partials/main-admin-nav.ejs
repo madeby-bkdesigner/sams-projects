@@ -1,0 +1,124 @@
+<div class="split-aside">
+    <header class="admin-nav-header">
+        <nav class="nav">
+            
+            <div class="container">
+                <div class="main-nav">
+                    <div class="logo">
+                        <a href="/"><img src="/public/images/logo.png" width="70px" height="70px" alt=""></a>
+                    </div>
+        
+                    <div class="nav-bars">
+                        <div class="hamburger-menu">
+                            <span class="menu"><i class="fas fa-bars burger-menu"></i></span>
+                        </div>
+                        <div class="small-sc-bar">
+                            <div class="links">
+                                   
+                                <div class="main-content">
+                                    <div class="user" >
+                                        <i class="far fa-user-circle"></i><a href="#"><%= currentuser.name%> </a>
+                                        <div class="logout">
+                                            <a href="/logout">logout</a>
+                                            <a href="/"><i class="fas fa-house-user"></i>home</a>
+                                        </div>
+                                    </div>
+                                        
+                                    <div class="subnav">
+                                        <div class="subnav-btn">
+                                            <button class="user-data"><i class="fas fa-blog"></i> <a href="/admin/managepost">manage post</a></button>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <% if(currentuser.role == 'Admin'){ %>
+                                        <div class="subnav">
+                                            <div class="subnav-btn">
+                                                <button class="user-data"><i class="fas fa-users"></i> <a href="/admin/manageuser">manage user</a></button>
+                                             </div>
+                                            
+                                        </div>
+                                    <% } %> 
+                                    
+                                    <div class="subnav">
+                                        <div class="subnav-btn">
+                                            <button class="user-data"> <i class="fas fa-user-shield"></i>  <a href="/admin/userdata/<%= currentuser._id %> ">user data</a></button>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+    
+                                <div class="transparent">
+                                    <span class="burger-close"><i class="fas fa-times"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="big-sc-bar ">
+                            <div class="links">
+                                   
+                                    <div class="main-content">
+                                        <div class="user" >
+                                        <div class="username">
+                                            <i class="far fa-user-circle"></i><a href="#"><%= currentuser.name%> </a>
+                                        </div>
+                                            <div class="logout">
+                                                <a href="/logout">logout</a>
+                                                <a href="/"><i class="fas fa-house-user"></i>home</a>
+                                            </div>
+                                        </div>
+                                            
+                                        <div class="subnav">
+                                            <div class="subnav-btn">
+                                                <button class="user-data"><i class="fas fa-blog"></i> <a href="/admin/managepost">manage post</a></button>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                        <% if(currentuser.role == 'Admin'){ %>
+                                            <div class="subnav">
+                                                <div class="subnav-btn">
+                                                    <button class="user-data"><i class="fas fa-users"></i> <a href="/admin/manageuser">manage user</a></button>
+                                                 </div>
+                                                
+                                            </div>
+                                        <% } %> 
+                                        
+                                        <div class="subnav">
+                                            <div class="subnav-btn">
+                                                <button class="user-data"> <i class="fas fa-user-shield"></i>  <a href="/admin/userdata/<%= currentuser._id %> ">user data</a></button>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                    </div>
+    
+                                <div class="transparent">
+                                    <span class="burger-close"><i class="fas fa-times"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        
+                </div>
+        </nav>
+    
+        <div class="message-container">
+            <% if(error && error.length > 0){ %>
+            <div class="message danger">
+              <%= error%>
+            </div>
+            <% } %>
+        
+            <% if(success && success.length > 0){ %>
+            <div class="message success ">
+              <%= success%>
+            </div>
+            <% } %>
+        </div>
+    </header>
+    <!-- =============================================================== -->
+</div>
+
+
+
